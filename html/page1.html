@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KGL Manager's Portal</title>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/page.css">
+</head>
+<body onload="">
+  <div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/img/logo.jpeg" alt="" width="50" height="50" class="d-inline-block align-text-top">
+        Karibu Groceries Limited
+      </a>
+    </div>
+  </nav>
+</div>
+
+<div>
+<div class="container-fluid">
+    <div id="header_content">
+ <h1>PROCUREMENT</h1>
+        <p id="header_caption">Fill out correctly the fields</p>
+    </div>
+   <hr> 
+</div>
+
+<div class="container-fluid">
+  <form name="registration" onsubmit="">
+
+
+  <div class="row">
+    <div class="tableRow col">
+        <label>Name of produce</label>
+        <input type="alphanumeric" name="nameofProduce">
+    </div>
+    <div class="tableRow col">
+        <label>Type of produce:</label>
+<select name=" goods" id="">
+    <option value = "Default"> Please select type of goods</option>
+    <option value = "Beans">Beans</option>
+    <option value = "Grain">Grain</option>
+    <option value = "Maize">Maize</option>
+    <option value = "cpeas">Cowpeas</option>
+    <option value = "G_nuts">G-nuts</option>
+    <option value = "Soya Beans">Soya Beans</option>
+    </select>
+</div>
+</div>
+
+<div class="row">
+  <div class="tableRow col">
+      <label>Date/Time of produce:</label>
+      <input type="datetime-local" name="Date">
+  </div>
+
+  <div class="tableRow col">
+      <label>Tonnage (kgs)</label>
+      <input type="numeric" name="theTonnage">
+  </div>
+  </div>
+
+  <div class="row">
+  <div class="tableRow col">
+      <label>Cost(ugx):</label>
+      <input type="numeric" name="Thecost">
+  </div>
+  
+  <div class="tableRow col">
+      <label>Name of the dealer:</label>
+      <input type="alpha-numeric" name="nameofthedealer">
+  </div>
+  </div>
+
+<div class="row">
+  <div class="tableRow col">
+      <label for="branchname">Branch</label>
+      <select name="" id="">
+          <option value="mat">Matugga</option>
+          <option value="mag">Maganjo</option>
+      </select>
+  </div>
+
+  <div class="tableRow col">
+      <label>Contact:</label>
+      <input type="numeric" name="contact">
+  </div>
+  </div>
+  
+  <div class="row">
+  <div class="tableRow col">
+      <label>Price to be sold :</label>
+      <input type="numeric" name="pricetosold">
+  </div>
+  </div> 
+
+  <div class="tableRow">
+      <label></label>
+      <button class="btnc" id="mybutton">submit</button>
+  </div>
+<hr>
+<div class="text-center p-3" style="background-color: #add8e6"> &copy; 2022 Copyright: Arinaitwe Sheila</div>
+</div>
+</form>
+
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"> </script>
+</body>
+</html>
