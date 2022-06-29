@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/page.css">
 </head>
-<body>
+<body onload ="firstFocus()">
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -21,60 +21,54 @@
 
     <h1>SALES</h1>
     <div class="container-fluid"></div>
-    <form name="registration" onsubmit="">
+    <form name="registration" onsubmit="" onblur="firstFocus()">
 
         <div class="row">
         <div class="tableRow col">
             <label>Nameofproduce(kgs)</label>
-            <input type="alphanumeric" name="nameofProduce">
+            <input type="alphanumeric" name="producename" onblur="valProd()">
+        </div>
+        <div class="tableRow col">
+            <label>Tonnage (kgs)</label>
+            <input type="alphanumeric" name="tonnage"onblur="valTonnage()">
+        </div>
         </div>
 
+        <div class="row">
             <div class="tableRow col">
-                <label>The amount paid(ugx)</label>
-                <input type="alphanumeric" name="theamountpaid">
+                <label>Amount paid(ugx)</label>
+                <input type="alphanumeric" name="amountpaid"onblur="valPaid()">
             </div>
-            </div>
-
-            <div class="row">
-            <div class="tableRow col">
-                <label>The buyer's Name:</label>
-                <input type="alphanumeric" name="thebuyer'sname">
-            </div>
-            <div class="tableRow col">
-                <label>Sales agent's name:</label>
-                <input type="alphanumeric" name="salesagent'sname">
-            </div>
-            </div>
-
-            <div class="row">
-            <div class="tableRow col">
-                <label>Date and Time </label>
-                <input type="datetime-local" name="dateandtime">
-            </div>
-            <div class="tableRow col">
-                <label>Sales agents</label>
-                <input type="alphanumeric" name="salesagent's name">
-            </div>
-            </div>
-
-            <div class="row">
             <div class="tableRow col">
                 <label>Buyer's Name:</label>
-                <input type="alphanumeric" name="buyer'sname">
+                <input type="alphanumeric" name="buyername"onblur="valBuyer()">
             </div>
-            </div>
+        </div>
 
-            <div class="tableRow">
-                <label></label>
-                <button class="btnc" id="mybutton">Submit</button>
+        <div class="row">
+            <div class="tableRow col">
+                <label>Sales agent's name:</label>
+                <input type="alphanumeric" name="agentsname" onblur="valSale()">
             </div>
+            <div class="tableRow col">
+                <label>Date and Time </label>
+                <input type="datetime-local" name="dateandtime"onblur="valDate()">
+            </div>
+        </div>
+            
+        <div>
+            <label></label>
+          <button class="btnc" id="mybutton">Submit</button>
+        </div>
+          </form>
+
           
-
 
 
 <hr>
 <div class="text-center p-3" style="background-color: #add8e6"> &copy; 2022 Copyright: Arinaitwe Sheila</div>
 
 <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"> </script>
+<script src ="/javascript/page2.js"></script>
 </body>
 </html>
