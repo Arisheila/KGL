@@ -6,38 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KGL Manager's Portal</title>
   <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/css/page.css">
+  <link rel="stylesheet" href="/assets/css/login.css">
+  <link rel ="stylesheet" href ="/assets/css/page.css"
 </head>
 <body onload ="firstFocus()">
-  <div>
-  <nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="/img/logo.jpeg" alt="" width="50" height="50" class="d-inline-block align-text-top">
-        Karibu Groceries Limited
-      </a>
-    </div>
-  </nav>
-</div>
-
-<div>
-<div class="container-fluid">
-    <div id="header_content">
- <h1>PROCUREMENT</h1>
-        <p id="header_caption">Fill out correctly the fields</p>
-    </div>
-   <hr> 
-</div>
-
-<div class="container-fluid">
-  <form name="registration" onsubmit="">
-
-
-  <div class="row">
-    <div class="tableRow col">
-        <label>Name of produce</label>
-        <select name="nameofProduce" id="" onblur="valProduce()">
-          <option value = "default">Name of goods</option>
+  <!-- <div>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/img/logo.jpeg" alt="" width="50" height="50" class="d-inline-block align-text-top">
+          Karibu Groceries Limited
+        </a>
+      </div>
+    </nav>
+  </div>
+   -->
+  <div class="container">
+    <form name="registration" onblur="firstFocus()">
+      <div class="brand-title">PROCUREMENT PRODUCE</div>
+        <div class="row">
+          <div class="tableRow col">
+              <label>Name of produce</label>
+              <select name="nameofProduce" id="" onblur="valProduce()">
+                <option value = "default">Name of goods</option>
+                <option value = "Beans">Beans</option>
+                <option value = "Grain">Grain</option>
+                <option value = "Maize">Maize</option>
+                <option value = "cpeas">Cowpeas</option>
+                <option value = "G_nuts">G-nuts</option>
+                <option value = "Soya Beans">Soya Beans</option>
+                </select>
+             
+          </div>
+          <div class="tableRow col">
+              <label>Type of produce:</label>
+      <select name="goods" id="" onblur="valueTop()">
+          <option value = "default"> Please select type of goods</option>
           <option value = "Beans">Beans</option>
           <option value = "Grain">Grain</option>
           <option value = "Maize">Maize</option>
@@ -45,83 +49,97 @@
           <option value = "G_nuts">G-nuts</option>
           <option value = "Soya Beans">Soya Beans</option>
           </select>
-       
-    </div>
-    <div class="tableRow col">
-        <label>Type of produce:</label>
-<select name="goods" id="" onblur="valueTop()">
-    <option value = "default"> Please select type of goods</option>
-    <option value = "Beans">Beans</option>
-    <option value = "Grain">Grain</option>
-    <option value = "Maize">Maize</option>
-    <option value = "cpeas">Cowpeas</option>
-    <option value = "G_nuts">G-nuts</option>
-    <option value = "Soya Beans">Soya Beans</option>
-    </select>
-</div>
-</div>
+      </div>
+      </div>
+      
+      <div class="row">
+        <div class="tableRow col">
+            <label>Date/Time of produce:</label>
+            <input type="datetime-local" name="date" onblur="valdate()">
+        </div>
+      
+        <div class="tableRow col">
+            <label>Tonnage (kgs)</label>
+            <input type="numeric" name="tonnage" onblur="valTon()">
+        </div>
+        </div>
+      
+        <div class="row">
+        <div class="tableRow col">
+            <label>Cost(ugx):</label>
+            <input type="numeric" name="thecost" onblur="valCost()">
+        </div>
+        
+        <div class="tableRow col">
+            <label>Name of the dealer:</label>
+            <input type="alpha-numeric" name="nameofthedealer"onblur="valDealer()">
+        </div>
+        </div>
+      
+      <div class="row">
+        <div class="tableRow col">
+            <label >Branch</label>
+            <select name="branch" onblur="valBran()">
+              <option value = "default">Branch Name</option>
+                <option value="ka">Kampala</option>
+                <option value="ma">Mbarara</option>
+            </select>
+        </div>
+      
+        <div class="tableRow col">
+            <label>Contact:</label>
+            <input type="numeric" name="contact"placeholder="0705522174"onblur="valContact()">
+        </div>
+        </div>
+        
+        <div class="row">
+        <div class="tableRow col">
+            <label>Price to be sold :</label>
+            <input type="numeric" name="pricetosold">
+        </div>
+        </div> 
+      
+        <div class="tableRow">
+            <label></label>
+            <button type="submit">Submit</button>
+        </div>
+      
+      </form>
+      
+      <hr>
+      <div id="footer">
+         <span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
+      </div>
+      
+      <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"> </script>
+      <script src ="/javascript/page1.js"></script>
+      
+      </body>
+      </html> 
 
-<div class="row">
-  <div class="tableRow col">
-      <label>Date/Time of produce:</label>
-      <input type="datetime-local" name="date" onblur="valdate()">
-  </div>
 
-  <div class="tableRow col">
-      <label>Tonnage (kgs)</label>
-      <input type="numeric" name="tonnage" onblur="valTon()">
-  </div>
-  </div>
 
-  <div class="row">
-  <div class="tableRow col">
-      <label>Cost(ugx):</label>
-      <input type="numeric" name="thecost" onblur="valCost()">
-  </div>
-  
-  <div class="tableRow col">
-      <label>Name of the dealer:</label>
-      <input type="alpha-numeric" name="nameofthedealer"onblur="valDealer()">
-  </div>
-  </div>
 
-<div class="row">
-  <div class="tableRow col">
-      <label for="branchname">Branch</label>
-      <select name="branch" id="">
-        <option value = "default">Branch Name</option>
-          <option value="ka">Kampala</option>
-          <option value="ma">Mbarara</option>
-      </select>
-  </div>
 
-  <div class="tableRow col">
-      <label>Contact:</label>
-      <input type="numeric" name="contact"placeholder="0705522174"onblur="valContact()">
-  </div>
-  </div>
-  
-  <div class="row">
-  <div class="tableRow col">
-      <label>Price to be sold :</label>
-      <input type="numeric" name="pricetosold">
-  </div>
-  </div> 
 
-  <div class="tableRow">
-      <label></label>
-      <button class="btnc" id="mybutton">submit</button>
-  </div>
 
-</form>
 
-<hr>
-<div id="footer">
-   <span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
-</div>
 
-<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"> </script>
-<script src ="/javascript/page1.js"></script>
 
-</body>
-</html>
+
+          
+        </div>
+      </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+ 

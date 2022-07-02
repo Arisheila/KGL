@@ -5,15 +5,14 @@ const firstFocus = () => {
 // validating name of produce field
 const valProduce = () => {
 let nopp = document.registration.nameofProduce;
-let namestring = /^[a-zA-Z0-9]+$/;
 if(
-    nopp.value == '' || !nopp.value.match(namestring)
+    nopp.value == 'default'
 ){
     nopp.style.border='2px Solid red'
     return false;
 }
 else{
-    nopp.style.border='2px Solid green'
+    nopp.style.border='2px Solid brown'
     return true;
 }
 
@@ -28,7 +27,7 @@ const valueTop =() => {
         return false;
     }
     else {
-        topp.style.border='2px solid green'
+        topp.style.border='2px solid brown'
         return true;
     }
     
@@ -43,7 +42,7 @@ const valdate = () =>{
         return false;
     }
     else {
-        datte.style.border ='2px solid green'
+        datte.style.border ='2px solid brown'
         return true;
     }
     
@@ -59,7 +58,7 @@ const valTon = ()=>{
         return false;
     }
     else{
-        tonn.style.border='2px solid green'
+        tonn.style.border='2px solid brown'
         return true;
     }
   
@@ -74,7 +73,7 @@ const valCost =()=>{
         return false;
     }
     else{
-        cost.style.border='2px solid green'
+        cost.style.border='2px solid brown'
         return true;
     }
     
@@ -88,7 +87,7 @@ const valDealer =() =>{
         return false;
     }
     else{
-        dealer.style.border ='2px solid green';
+        dealer.style.border ='2px solid brown';
         return true;
     }
    
@@ -98,7 +97,7 @@ const valContact =() =>{
     const contact = document.registration.contact;
     const contactFormat= /[0-9]/;
     if(contact.value.match(contactFormat) && contact.value.length == 10){
-        contact.style.border ='2px solid green';
+        contact.style.border ='2px solid brown';
         return true; 
     }
     else{
@@ -107,7 +106,20 @@ const valContact =() =>{
     }
 };
 
-
+// const valBran =() => {
+//     let branchy = document.registration.branch;
+//     if(
+//         branchy == 'default'
+//     ){
+//         branchy.style.border ='2px Solid red'
+//         return false;
+//     }
+//     else {
+//         branchy.style.border='2px solid green'
+//         return true;
+//     }
+    
+// };
 
 
 

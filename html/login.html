@@ -4,66 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff Login Portal</title>
-    <link rel="stylesheet" href="/assets/css/login.css">
-
+    <title>KGL STAFF LOGIN </title>
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/login.css" rel="stylesheet">
 </head>
 <body>
-   
+    
     <div class="container">
-        <div class="screen">
-            <div class="screen__content">
-                
-                <form class="login">
-                    <h2 class="loginTitle">LOG IN</h2>
-                    <div class="row">
-                    <div class="login__field col">
-                        <i class="login__icon fas fa-user"></i>
-                        <input type="text" class="login__input" placeholder="User name / Email">
-                    </div>
-                    <div class="login__field col">
-                        <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" placeholder="Password">
-                    </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="login__field col">
-                            <i class="login__icon fas fa-lock"></i>
-                            <label for="branchname">Branch</label>
-                            <select name="" id="">
-                                <option value="mat">Kampala</option>
-                                <option value="mag">Mbarara</option>
-                            </select>
-
-                        </div>
-                        
-                    <button class="button login__submit col">
-                            <span class="button__text">Log In Now</span>
-                        <i class="button__icon fas fa-chevron-right"></i>
-                    
-                    </button>
-                    </div>
-                    	
-                
-                       
-
-                    
-                </form>
-              
-            </div>
-            <div class="screen__background">
-                <span class="screen__background__shape screen__background__shape4"></span>
-                <span class="screen__background__shape screen__background__shape3"></span>		
-                <span class="screen__background__shape screen__background__shape2"></span>
-                <span class="screen__background__shape screen__background__shape1"></span>
-            </div>		
+    <form name="registration" onblur="firstFocus()">
+        <div class="brand-title">LOGIN</div>
+        <div class="inputs">
+          <label>EMAIL</label>
+          <input type="email"name="email" placeholder="example@test.com" />
+          <label>PASSWORD</label>
+          <input type="password" placeholder="Min 4 charaters" onblur="valPass()"  />
+          <button type="submit">LOGIN</button>
         </div>
-    </div>
+      </div>
+    </form>
+      <div class="text-right p-3"> &copy; 2022 Copyright: Arinaitwe Sheila</div>
+
+<script src ="/javascript/login.js"></script>
+  </body>
+  </html>
 
 
 
-   <script src="/javascript/log"></script> 
-  <script src ="/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script> 
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

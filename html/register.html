@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGL REGISTER FORM</title>
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/login.css" rel="stylesheet">
+</head>
+<body onload="firstFocus()">
+    
+<div class="container">
+    <form name="registration" onsubmit="" onblur="firstFocus()">
+        <div class="brand-title">REGISTER HERE</div>
+        <div class="inputs">
+            <div class="row">
+                <div class="tableRow col">
+                    <label >First Name</label>
+                    <input type="text" name="firstname" onblur="frname()">
+                </div>
+                <div class="tableRow col">
+                    <label>Sur Name</label>
+                    <input type="text" name="surname" onblur="valSec()">
+                </div>   
+            </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label >Branch</label>
+                            <select name="branch" onblur="valBran()">
+                              <option value = "default">Branch Name</option>
+                                <option value="ka">Kampala</option>
+                                <option value="ma">Mbarara</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label >Role</label>
+                            <select name="role" onblur="valRole()">
+                              <option value = "default">Role</option>
+                                <option value="ka">Director</option>
+                                <option value="ma">Manager</option>
+                                <option value="ma">Sales Agents</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="tableRow col">
+                            <label>EMAIL</label>
+                            <input type="email"name="email" placeholder="example@test.com"onblur="valEmail()" />
+                        </div>
+                        <div class="tableRow col">
+                            <label>PASSWORD</label>
+                            <input type="password"name="password" placeholder="Min 4 charaters"onblur="valPass()" />
+
+                        </div>   
+                    </div>
+                    <button type="submit">Register</button>
+    </form>
+
+</div>
+<script src ="/javascript/register.js"></script>
+</body>
+</html>

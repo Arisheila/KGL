@@ -10,7 +10,7 @@ const valProd =() =>{
         return false;
     }
     else{
-        produce.style.border ='2px solid green';
+        produce.style.border ='2px solid brown';
         return true;
     }
 };
@@ -22,7 +22,7 @@ const valTonnage = () =>{
         return false;
     }
     else{
-        ton.style.border ='2px solid green';
+        ton.style.border ='2px solid brown';
         return true;
     }
 }
@@ -35,7 +35,7 @@ const valPaid = () =>{
         return false;
     }
     else{
-        paid.style.border ='2px solid green';
+        paid.style.border ='2px solid brown';
         return true;
     }
 };
@@ -49,7 +49,7 @@ const valBuyer =() =>{
         return false;
     }
     else{
-        buyer.style.border ='2px solid green';
+        buyer.style.border ='2px solid brown';
         return true;
     }
 };
@@ -63,7 +63,7 @@ const valSale = () =>{
         return false;
     }
     else{
-        salee.style.border ='2px solid green';
+        salee.style.border ='2px solid brown';
         return true;
     }
 };
@@ -77,7 +77,7 @@ const valDate = () =>{
         return false;
     }
     else {
-        ddate.style.border ='2px solid green'
+        ddate.style.border ='2px solid brown'
         return true;
     }
     

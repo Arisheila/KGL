@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produce sold on Credit (Debtors)</title>
     <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
     <link rel="stylesheet" href="/assets/css/page.css">
-
 </head>
 <body onload="firstFocus()">
-  
+<!--   
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -18,89 +18,74 @@
             Karibu Groceries Limited
           </a>
         </div>
-      </nav>
+      </nav> -->
 
-<div>
-    <div class="container-fluid">
-        <div id="header_content">
-     <h1>DEBTORS</h1>
-            <p id="header_caption">Fill out correctly the fields</p>
-        </div>
-       <hr> 
-    </div>
-
-</div>
-
-    <div class="container-fluid"></div>
-    <form name="registration" onsubmit="">
-
-        <div class="row">
-        <div class="tableRow col">
-            <label>Name of buyer</label>
-            <input type="alphanumeric" name="buyername"onblur="valBuyer()">
-        </div>
-        <div class="tableRow col">
-            <label>National ID:</label>
-            <input type="alphabets" name="nationalid"onblur="valNin()">
-        </div>
-        </div>
-
-        <div class="row">
-                <div class="tableRow col">
-                    <label>Location</label>
-                    <input type="alphanumeric" name="location" onblur="valLoc()">
-                    
+      <div class="container">
+        <form name="registration" onblur="firstFocus()">
+            <div class="brand-title">DEBTORS</div>
+            <div class="inputs">
+                <div class="row">
+                    <div class="tableRow col">
+                        <label>Name of buyer</label>
+                        <input type="alphanumeric" name="buyername"onblur="valBuyer()">
+                    </div>
+                    <div class="tableRow col">
+                        <label>National ID:</label>
+                        <input type="alphabets" name="nationalid"onblur="valNin()">
+                    </div>
                 </div>
-                <div class="tableRow col">
-                 <label>Contacts</label>
-                <input type="numeric"name="contact"placeholder="0783023810"onblur="valCon()">
+                <div class="row">
+                    <div class="tableRow col">
+                        <label>Location</label>
+                         <input type="alphanumeric" name="location" onblur="valLoc()">
+                    </div>
+                    <div class="tableRow col">
+                        <label>Contacts</label>
+                        <input type="numeric"name="contact"placeholder="0783023810"onblur="valCon()">
+                    </div>
+
+                <div class="row">
+                    <div class="tableRow col">
+                        <label>Amount due</label>
+                        <input type="alphanumeric" name="amountdue"onblur="valDue()">
+                    </div>
+                    <div class = "tableRow col">
+                        <label>Sales Agent</label>
+                        <input type="alphanumeric"name="salesagent"onblur="valAgent()">
+                    </div>
                 </div>
-</div>
+            
+                <div class="row">
+                    <div class="tableRow col">
+                        <label>Due Date:</label>
+                        <input type="datetime-local" name="date" onblur="valDate()">
+                    </div>
+            
+                    <div class="tableRow col">
+                        <label>Produce name</label>
+                        <input type="alphanumeric" name="nameofproduce" onblur="valProduce()">
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="tableRow col">
+                        <label>Tonnage</label>
+                        <input type="numeric" name="tonnage"onblur="valTonnage()">
+                    </div>
+            
+                    <div class="tableRow col">
+                        <label>Date of dispatch</label>
+                        <input type="datetime-local" name="dispatch"onblur="valDispatch()">
+                    </div>
+                </div>
 
-<div class="row">
-<div class="tableRow col">
-    <label>Amount due</label>
-    <input type="alphanumeric" name="amountdue"onblur="valDue()">
-</div>
-<div class = "tableRow col">
-<label>Sales Agent</label>
-<input type="alphanumeric"name="salesagent"onblur="valAgent()">
-</div>
-</div>
-
-<div class="row">
-        <div class="tableRow col">
-            <label>Due Date:</label>
-            <input type="datetime-local" name="date" onblur="valDate()">
+        </form>
+        
+        <div id="footer">
+        <span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
         </div>
-
-        <div class="tableRow col">
-            <label>Produce name</label>
-            <input type="alphanumeric" name="nameofproduce" onblur="valProduce()">
-        </div>
-        </div>
-
-        <div class="row">
-        <div class="tableRow col">
-            <label>Tonnage</label>
-            <input type="numeric" name="tonnage"onblur="valTonnage()">
-        </div>
-
-        <div class="tableRow col">
-            <label>Date of dispatch</label>
-            <input type="datetime-local" name="dispatch"onblur="valDispatch()">
-        </div>
-        </div>
-
-        <div class="tableRow">
-            <label></label>
-            <button class="btnc" id="mybutton">submit</button>
-        </div>
-      
-<hr>
-<div class="text-center p-3" style="background-color: #add8e6"> &copy; 2022 Copyright: Arinaitwe Sheila</div>
 
 <script src="/js/bootstrap.bundle.js"></script>
 <script src ="/javascript/page3.js"></script>
 </body>
-</html>
+</html> 

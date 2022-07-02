@@ -19,8 +19,8 @@
 /* Colors */
 :root {
   --color-default: #2b180d;
-  --color-primary: #56b8e6;
-  --color-secondary: #1b2f45;
+  --color-primary: #784830;
+  --color-secondary: #583b1d;
 }
 
 /* Smooth scroll behavior */
@@ -260,14 +260,14 @@ section {
 }
 
 .header .logo img {
-  max-height: 40px;
+  max-height: 150px;
   margin-right: 6px;
 }
 
 .header .logo h1 {
   font-size: 30px;
   font-weight: 700;
-  color: #fff;
+  color: #ffff;
   font-family: var(--font-secondary);
   margin: 0;
 }
@@ -505,7 +505,7 @@ section {
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: url("/img/cereal.jpg") top center;
+  background: url("/img/beans.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 120px 0;
@@ -579,7 +579,7 @@ section {
 }
 
 .hero .btn-get-started:hover {
-  background: rgba(86, 184, 230, 0.8);
+  background:#2b180d;
 }
 
 .hero .btn-watch-video {

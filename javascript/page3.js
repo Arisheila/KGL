@@ -12,7 +12,7 @@ const valBuyer = () => {
         return false;
     }
     else{
-        buyer.style.border='2px Solid green'
+        buyer.style.border='2px Solid brown'
         return true;
          }
     };
@@ -20,7 +20,7 @@ const valBuyer = () => {
         const nin = document.registration.nationalid;
         const ninValid = /^[a-zA-Z0-9]+$/;
         if(nin.value.match(ninValid) && nin.value.length == 14){
-            nin.style.border ='2px solid green';
+            nin.style.border ='2px solid brown';
             return true; 
         }
         else{
@@ -37,7 +37,7 @@ const valLoc = () =>{
         return false;
     }
     else{
-        loc.style.border='2px solid green'
+        loc.style.border='2px solid brown'
         return true;
     }
 };
@@ -50,7 +50,7 @@ const valCon=() =>{
         return true; 
     }
     else{
-        contt.style.border='2px solid red';
+        contt.style.border='2px solid brown';
         return false;
     }
 };
@@ -59,7 +59,7 @@ const valDue = () =>{
     const due =document.registration.amountdue;
     const amount = /^[a-zA-Z0-9]+$/;
     if(due.value.length < 5 || !due.value.match(amount)){
-        due.style.border= '2px solid red';
+        due.style.border= '2px solid brown';
         return false;
     }
     else{
@@ -76,7 +76,7 @@ const valAgent = () =>{
         return false;
     }
     else{
-        sagent.style.border='2px solid green'
+        sagent.style.border='2px solid brown'
         return true;
     }
 };
@@ -91,7 +91,7 @@ const valDate = () =>{
         return false;
     }
     else {
-        ddate.style.border ='2px solid green'
+        ddate.style.border ='2px solid brown'
         return true;
     }
     
@@ -105,7 +105,7 @@ const valProduce = () =>{
         return false;
     }
     else{
-        prod.style.border='2px solid green'
+        prod.style.border='2px solid brown'
         return true;
     }
 };
@@ -119,7 +119,7 @@ const valTonnage = () =>{
         return false;
     }
     else{
-        ton.style.border ='2px solid green';
+        ton.style.border ='2px solid brown';
         return true;
     }
 }
@@ -133,7 +133,7 @@ const valDispatch = () =>{
         return false;
     }
     else {
-        dispatchDate.style.border ='2px solid green'
+        dispatchDate.style.border ='2px solid brown'
         return true;
     }
     
