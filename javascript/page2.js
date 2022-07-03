@@ -2,18 +2,21 @@ const firstFocus =()=>{
     let sale = document.registration.nameofProduce.focus();
 };
 
-const valProd =() =>{
-    const produce = document.registration.producename;
-    const nProduce = /^[a-zA-Z0-9]+$/;
-    if(produce.value.length < 5 || !produce.value.match(nProduce)){
-        produce.style.border ='2px solid red';
+const valProd =() => {
+    let produce =document.registration.producename;
+    if(
+        produce.value == 'default'
+    ){
+        produce.style.border ='2px Solid red'
         return false;
     }
-    else{
-        produce.style.border ='2px solid brown';
+    else {
+        produce.style.border='2px solid brown'
         return true;
     }
+    
 };
+
 const valTonnage = () =>{
     const ton = document.registration.tonnage;
     const aTon =  /[0-9]/;
@@ -82,3 +85,4 @@ const valDate = () =>{
     }
     
 };
+

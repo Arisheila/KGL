@@ -5,132 +5,136 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KGL Manager's Portal</title>
-  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/login.css">
   <link rel ="stylesheet" href ="/assets/css/page.css"
 </head>
 <body onload ="firstFocus()">
-  <!-- <div>
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="/img/logo.jpeg" alt="" width="50" height="50" class="d-inline-block align-text-top">
-          Karibu Groceries Limited
-        </a>
+  <!-- <nav class="navbar navbar-expand-lg navbar-">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </div>
-   -->
+    </div>
+  </nav> -->
+
   <div class="container">
     <form name="registration" onblur="firstFocus()">
       <div class="brand-title">PROCUREMENT PRODUCE</div>
+      <div class="inputs">
         <div class="row">
           <div class="tableRow col">
-              <label>Name of produce</label>
-              <select name="nameofProduce" id="" onblur="valProduce()">
-                <option value = "default">Name of goods</option>
-                <option value = "Beans">Beans</option>
-                <option value = "Grain">Grain</option>
-                <option value = "Maize">Maize</option>
-                <option value = "cpeas">Cowpeas</option>
-                <option value = "G_nuts">G-nuts</option>
-                <option value = "Soya Beans">Soya Beans</option>
-                </select>
-             
+            <label>Name of produce (kgs)</label>
+            <select name="nameofProduce" id="" onblur="valProduce()">
+              <option value = "default">Name of goods</option>
+              <option value = "Beans">Beans</option>
+              <option value = "Grain">Grain</option>
+              <option value = "Maize">Maize</option>
+              <option value = "cpeas">Cowpeas</option>
+              <option value = "G_nuts">G-nuts</option>
+              <option value = "Soya Beans">Soya Beans</option>
+              </select> 
           </div>
+
           <div class="tableRow col">
-              <label>Type of produce:</label>
-      <select name="goods" id="" onblur="valueTop()">
-          <option value = "default"> Please select type of goods</option>
-          <option value = "Beans">Beans</option>
-          <option value = "Grain">Grain</option>
-          <option value = "Maize">Maize</option>
-          <option value = "cpeas">Cowpeas</option>
-          <option value = "G_nuts">G-nuts</option>
-          <option value = "Soya Beans">Soya Beans</option>
-          </select>
-      </div>
+            <label>Type of produce:</label>
+            <select name="goods" id="" onblur="valueTop()">
+              <option value = "default"> Please select type of goods</option>
+              <option value = "Beans">Beans</option>
+              <option value = "Grain">Grain</option>
+              <option value = "Maize">Maize</option>
+              <option value = "cpeas">Cowpeas</option>
+              <option value = "G_nuts">G-nuts</option>
+              <option value = "Soya Beans">Soya Beans</option>
+              </select>
+          </div>
+      
+      <div class="row">
+        <div class="tableRow col">
+          <label>Date/Time of produce:</label>
+          <input type="datetime-local" name="date" onblur="valdate()">
+        </div>
+        <div class="tableRow col">
+          <label>Tonnage (kgs)</label>
+          <input type="numeric" name="tonnage" onblur="valTon()">
+        </div>
       </div>
       
       <div class="row">
         <div class="tableRow col">
-            <label>Date/Time of produce:</label>
-            <input type="datetime-local" name="date" onblur="valdate()">
-        </div>
-      
-        <div class="tableRow col">
-            <label>Tonnage (kgs)</label>
-            <input type="numeric" name="tonnage" onblur="valTon()">
-        </div>
-        </div>
-      
-        <div class="row">
-        <div class="tableRow col">
-            <label>Cost(ugx):</label>
-            <input type="numeric" name="thecost" onblur="valCost()">
+          <label>Cost(ugx):</label>
+          <input type="numeric" name="thecost" onblur="valCost()">
         </div>
         
         <div class="tableRow col">
-            <label>Name of the dealer:</label>
-            <input type="alpha-numeric" name="nameofthedealer"onblur="valDealer()">
+          <label>Name of the dealer:</label>
+          <input type="alpha-numeric" name="nameofthedealer"onblur="valDealer()">
         </div>
-        </div>
+      </div>
       
       <div class="row">
         <div class="tableRow col">
-            <label >Branch</label>
-            <select name="branch" onblur="valBran()">
-              <option value = "default">Branch Name</option>
-                <option value="ka">Kampala</option>
-                <option value="ma">Mbarara</option>
+          <label >Branch</label>
+          <select name="branch" onblur="valBran()">
+            <option value = "default">Branch Name</option>
+            <option value="ka">Kampala</option>
+            <option value="ma">Mbarara</option>
             </select>
         </div>
       
         <div class="tableRow col">
-            <label>Contact:</label>
-            <input type="numeric" name="contact"placeholder="0705522174"onblur="valContact()">
+          <label>Contact:</label>
+          <input type="numeric" name="contact"placeholder="0705522174"onblur="valContact()">
         </div>
-        </div>
+      </div>
         
-        <div class="row">
+      <div class="row">
         <div class="tableRow col">
             <label>Price to be sold :</label>
-            <input type="numeric" name="pricetosold">
-        </div>
+            <input type="numeric" name="pricetosold" onblur="valPrice(this, paiderror)">
+            <span id ="paiderror"></span>
         </div> 
-      
         <div class="tableRow">
             <label></label>
             <button type="submit">Submit</button>
         </div>
+      </div>
+    </form>
+  </div>
       
-      </form>
-      
-      <hr>
       <div id="footer">
          <span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
       </div>
       
-      <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"> </script>
-      <script src ="/javascript/page1.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"> </script>
+  <script src ="/javascript/page1.js"></script>
       
-      </body>
-      </html> 
-
-
-
-
-
-
-
-
-
-
-
-          
-        </div>
-      </div>
-    </form>
+</body>
+</html> 
 
 
 

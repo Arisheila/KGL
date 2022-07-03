@@ -121,6 +121,21 @@ const valContact =() =>{
     
 // };
 
+let valPrice = (pricey,paiderror)=>{
+    let price = /[0-9]/;
+    if(pricey.value.match(price) && pricey.value.length >= 5){
+    
+        return true;
+    }else{
+        paiderror.innerHTML = 'Enter valid amount';
+        paiderror.style.color = 'red';
+        paiderror.style.fontSize = '11px';
+        pricey.focus();
+        return false;
+        
+    }
+}
+
 
 
 

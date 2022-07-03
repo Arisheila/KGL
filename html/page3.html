@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produce sold on Credit (Debtors)</title>
-    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/login.css">
     <link rel="stylesheet" href="/assets/css/page.css">
 </head>
@@ -20,7 +20,7 @@
         </div>
       </nav> -->
 
-      <div class="container">
+    <div class="container">
         <form name="registration" onblur="firstFocus()">
             <div class="brand-title">DEBTORS</div>
             <div class="inputs">
@@ -43,6 +43,7 @@
                         <label>Contacts</label>
                         <input type="numeric"name="contact"placeholder="0783023810"onblur="valCon()">
                     </div>
+                </div>    
 
                 <div class="row">
                     <div class="tableRow col">
@@ -78,14 +79,19 @@
                         <input type="datetime-local" name="dispatch"onblur="valDispatch()">
                     </div>
                 </div>
-
+                <div>
+                    <label></label>
+                    <button class="btnc" id="mybutton">Submit</button>
+                </div>
+            </div>
         </form>
-        
+    </div>   
+
         <div id="footer">
         <span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
         </div>
 
-<script src="/js/bootstrap.bundle.js"></script>
-<script src ="/javascript/page3.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src ="/javascript/page3.js"></script>
 </body>
 </html> 

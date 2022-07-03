@@ -4,32 +4,33 @@ input {
   caret-color:#784830;
 }
 
-body {
+  body {
   margin: 0;
-  width: 100vw;
-  height: 100vh;
+  width:auto;
+  height:auto;
   background: #ecf0f3;
   display: flex;
   align-items: center;
-  text-align: center;
-  justify-content: center;
-  place-items: center;
+  text-align:center;
+  justify-content:center;
+  place-items:center;
   overflow: hidden;
-  font-family: poppins;
-}
+  font-family: poppins; 
+} 
 
 .container {
-  position: relative;
+  /* position: relative; */
   width: 350px;
-  height: 500px;
+  height: 400px;
   border-radius: 20px;
-  padding: 40px;
+  /* padding: 40px; */
   box-sizing: border-box;
   background: #ecf0f3;
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  margin-top: 100px;
 }
 
-.brand-logo {
+/* .brand-logo {
   height: 100px;
   width: 0px;
   background: url("/img/logokgl.jpeg");
@@ -37,7 +38,7 @@ body {
   border-radius: 50%;
   box-sizing: border-box;
   box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
-}
+} */
 
 .brand-title {
   margin-top: 5px;
@@ -100,7 +101,7 @@ button:hover {
 }
 
 a {
-  position: absolute;
+  /* position: absolute; */
   font-size: 8px;
   bottom: 4px;
   right: 4px;
@@ -115,4 +116,14 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#footer{
+  text-align: center;
+  
+}
+.bar{
+height: 30px;
+/* display:flex; */
+/* text-align: center; */
 }

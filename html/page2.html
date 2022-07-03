@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales Portal</title>
-    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/login.css">
     <link rel="stylesheet" href="/assets/css/page.css">
 </head>
@@ -19,53 +19,63 @@
         </div>
       </nav> -->
 
-    <div class="container">
-        <form name="registration" onblur="firstFocus()">
-            <div class="brand-title">SALES</div>
+ <div class="container">
+    <form name="registration" onblur="firstFocus()">
+        <div class="brand-title">SALES</div>
             <div class="inputs">
                 <div class="row">
                     <div class="tableRow col">
-                        <label>Nameofproduce(kgs)</label>
-                        <input type="alphanumeric" name="producename" onblur="valProd()">
+                        <label>Name of produce(kgs):</label>
+                        <select name="producename" id="" onblur="valProd()">
+                            <option value = "default"> Select name of produce</option>
+                            <option value = "Beans">Beans</option>
+                            <option value = "Grain">Grain</option>
+                            <option value = "Maize">Maize</option>
+                            <option value = "cpeas">Cowpeas</option>
+                            <option value = "G_nuts">G-nuts</option>
+                            <option value = "Soya Beans">Soya Beans</option>
+                        </select>
                     </div>
                     <div class="tableRow col">
                         <label>Tonnage (kgs)</label>
                         <input type="alphanumeric" name="tonnage"onblur="valTonnage()">
                     </div>
-                    </div>
+                </div>
             
-                    <div class="row">
-                        <div class="tableRow col">
-                            <label>Amount paid(ugx)</label>
-                            <input type="alphanumeric" name="amountpaid"onblur="valPaid()">
-                        </div>
-                        <div class="tableRow col">
-                            <label>Buyer's Name:</label>
-                            <input type="alphanumeric" name="buyername"onblur="valBuyer()">
-                        </div>
+                <div class="row">
+                    <div class="tableRow col">
+                        <label>Amount paid(ugx)</label>
+                        <input type="alphanumeric" name="amountpaid"onblur="valPaid()">
                     </div>
-            
-                    <div class="row">
-                        <div class="tableRow col">
-                            <label>Sales agent's name:</label>
-                            <input type="alphanumeric" name="agentsname" onblur="valSale()">
-                        </div>
-                        <div class="tableRow col">
-                            <label>Date and Time </label>
-                            <input type="datetime-local" name="dateandtime"onblur="valDate()">
-                        </div>
-                    </div>
-                        
-                    <div>
-                        <label></label>
-                      <button class="btnc" id="mybutton">Submit</button>
+                    <div class="tableRow col">
+                        <label>Buyer's Name:</label>
+                        <input type="alphanumeric" name="buyername"onblur="valBuyer()">
                     </div>
                 </div>
-            </form>    
+            
+                <div class="row">
+                    <div class="tableRow col">
+                        <label>Sales agent's name:</label>
+                        <input type="alphanumeric" name="agentsname" onblur="valSale()">
+                    </div>
+                    <div class="tableRow col">
+                        <label>Date and Time </label>
+                        <input type="datetime-local" name="dateandtime"onblur="valDate()">
+                    </div>
+                </div>
+                
+                <div>
+                    <label></label>
+                    <button class="btnc" id="mybutton">Submit</button>
+                </div>
+            </div>
+    </form>
+
+</div>       
             <div id="footer">
                <span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
             </div>
-            <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"> </script>
-            <script src ="/javascript/page2.js"></script>
-    </body>
+    <script src="/assets/bootstrap/js/bootstrap.bundle.js"> </script>
+    <script src ="/javascript/page2.js"></script>
+</body>
 </html> 
