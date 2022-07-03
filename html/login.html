@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KGL STAFF LOGIN </title>
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/login.css"> 
 </head>
 <body>
 
-<div class="bar">
+  <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">KGL</a>
@@ -42,31 +43,34 @@
       </div>
     </div>
   </nav>
+
+
+
+<div class="container">
+  <div class="brand-logo"></div>
+  <div class="brand-title">TWITTER</div>
+  <div class="inputs">
+    <label>EMAIL</label>
+    <input type="email" placeholder="example@test.com" />
+    <label>PASSWORD</label>
+    <input type="password" placeholder="Min 6 charaters long" />
+    <button type="submit">LOGIN</button>
   </div>
+  <a href="https://twitter.com/prathkum">MADE BY PRATHAM</a>
+</div>
+  <span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
+
+
+
+
+
  
-   <div class="container">
-    <div class="row">
-    <form name="registration" onblur="firstFocus()">
-        <div class="brand-title">LOGIN</div>
-        <div class="inputs">
-          <label>EMAIL</label>
-          <input type="email"name="email" placeholder="example@test.com" />
-          <label>PASSWORD</label>
-          <input type="password"name="password" placeholder="Min 4 charaters" onblur="valPasso()"  />
-          <button type="submit">LOGIN</button>
-        </div>
-      </div>
-    </form>
-  </div>
-  
-  <br>
-  <footer>
-      <span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
-  </footer>
+
   
    
- <script src ="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
 <script src ="/javascript/register.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 </body>
 </html>
