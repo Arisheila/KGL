@@ -46,11 +46,11 @@ const valCon=() =>{
     const contt = document.registration.contact;
     const contactFormat= /[0-9]/;
     if(contt.value.match(contactFormat) && contt.value.length == 10){
-        contt.style.border ='2px solid green';
+        contt.style.border ='2px solid brown';
         return true; 
     }
     else{
-        contt.style.border='2px solid brown';
+        contt.style.border='2px solid red';
         return false;
     }
 };
@@ -59,11 +59,11 @@ const valDue = () =>{
     const due =document.registration.amountdue;
     const amount = /^[a-zA-Z0-9]+$/;
     if(due.value.length < 5 || !due.value.match(amount)){
-        due.style.border= '2px solid brown';
+        due.style.border= '2px solid red';
         return false;
     }
     else{
-        due.style.border='2px solid green'
+        due.style.border='2px solid brown'
         return true;
     }
 };

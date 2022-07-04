@@ -61,7 +61,7 @@ const valRole = () =>{
 const valPass = () =>{
     let pass = document.registration.password;
     let passwordee = /^[a-zA-Z0-9]+$/;
-    if(pass.value.length <4|| !pass.value.match(passwordee)
+    if(pass.value.length < 4|| !pass.value.match(passwordee)
         
     ){
         pass.style.border ='2px Solid red'

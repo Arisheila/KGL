@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
 
 input {
-  caret-color: red;
+  caret-color:#784830;;
 }
 
 /* body {
@@ -47,7 +47,7 @@ input {
   margin-top: 10px;
   font-weight: 900;
   font-size: 1.8rem;
-  color: #1DA1F2;
+  color:#2b180d;
   letter-spacing: 1px;
 }
 
@@ -90,7 +90,7 @@ input {
 button {
   color: white;
   margin-top: 20px;
-  background: #1DA1F2;
+  background:#2b180d;
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
@@ -109,7 +109,7 @@ a {
   bottom: 4px;
   right: 4px;
   text-decoration: none;
-  color: black;
+  color: #2b180d;
   /* background:brown; */
   border-radius: 10px;
   padding: 2px;
@@ -122,10 +122,10 @@ h1 {
 }
 
 .navbar{
-  background-color: brown !important;
+  background-color: #C4A484!important;
 }
 #footer-content {
-  color:brown;
+  color:#2b180d;
   text-align: center;
   margin-left: 40%;
   margin-top: 20px;
