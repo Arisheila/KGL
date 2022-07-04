@@ -123,6 +123,7 @@ h1 {
 
 .navbar{
   background-color: #C4A484!important;
+
 }
 #footer-content {
   color:#2b180d;
@@ -135,4 +136,8 @@ h1 {
 body{
   height:auto;
   width:auto;
+}
+.navbar img {
+height:60px;
+width:80px;
 }
