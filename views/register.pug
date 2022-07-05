@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title KGL REGISTER FORM
+  link(href='/assets/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='/assets/css/login.css')
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  .container-fluid
+    img(src='/img/logokgl.jpeg' alt='')
+    a.navbar-brand(href='#') KGL
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNavDropdown.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/html/kgl.html') Home
+        li.nav-item
+          a.nav-link(href='/html/login.html') LOG IN
+        li.nav-item
+          a.nav-link(href='/html/kgl.html') LOG OUT
+.container
+  form(name='registration' onsubmit='' onblur='firstFocus()')
+    .brand-title REGISTER HERE
+    .inputs
+      .row
+        .tableRow.col
+          label First Name
+          input(type='text' name='firstname' onblur='frname()')
+        .tableRow.col
+          label Sur Name
+          input(type='text' name='surname' onblur='valSec()')
+      .row
+        .col-6
+          label Branch
+          select(name='branch' onblur='valBran()')
+            option(value='default') Branch Name
+            option(value='ka') Kampala
+            option(value='ma') Mbarara
+        .col-6
+          label Role
+          select(name='role' onblur='valRole()')
+            option(value='default') Role
+            option(value='ka') Director
+            option(value='ma') Manager
+            option(value='ma') Sales Agents
+      .row
+        .tableRow.col
+          label EMAIL
+          input(type='email' name='email' placeholder='example@test.com' onblur='valEmail()')
+        .tableRow.col
+          label PASSWORD
+          input(type='password' name='password' placeholder='Min 4 charaters' onblur='valPass()')
+      button(type='submit') Register
+span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
+script(src='/assets/bootstrap/js/bootstrap.bundle.js')
+script(src='/javascript/register.js')

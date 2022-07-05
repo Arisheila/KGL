@@ -61,4 +61,30 @@ app.use(expressSession);
 app.use(passport.initialize());
 app.use(passport.session());
 
+passport.use(Manager.createStrategy());
+passport.serializeUser(Manager.serializeUser());
+passport.deserializeUser(Manager.deserializeUser());
+
+// const loginchecker = function(req,res,next){
+//   if (req.path != '/login' && req.path != '/register' && !req.session.user){
+//     res.redirect('/register')
+//   }
+//   next()
+// }
+// server.use(loginchecker)
+
+//setting up Routes
+
+
+
+
+// Non Existing Routes and Server Port
+// handling non existing routes
+server.get('*', (req, res) => {
+  res.status(404).send('OOPS! WRONG ADDRESS');
+});
+
+// server
+server.listen(3002, () => console.log('Listening on Port 3002'));
+
 

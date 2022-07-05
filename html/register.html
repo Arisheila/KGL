@@ -5,11 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KGL REGISTER FORM</title>
-    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/css/login.css" rel="stylesheet">
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/login.css"> 
 </head>
 <body onload="firstFocus()">
-    
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <img src="/img/logokgl.jpeg" alt="">
+          <a class="navbar-brand" href="#">KGL</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/html/kgl.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/html/login.html">LOG IN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/html/kgl.html">LOG OUT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+ 
 <div class="container">
     <form name="registration" onsubmit="" onblur="firstFocus()">
         <div class="brand-title">REGISTER HERE</div>
@@ -60,6 +83,12 @@
     </form>
 
 </div>
+
+
+<span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
+
+<script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
 <script src ="/javascript/register.js"></script>
+
 </body>
 </html>
