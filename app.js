@@ -12,6 +12,10 @@ const expressSession = require('express-session')({
   saveUninitialized: false,
 });
 
+const loginRoutes = require("./routes/loginroutes")
+const salesRoutes = require("./routes/salesroutes")
+const purchasesRoutes = require("./routes/procurementroutes")
+
 
 
 
@@ -61,9 +65,9 @@ app.use(expressSession);
 app.use(passport.initialize());
 app.use(passport.session());
 
-passport.use(Manager.createStrategy());
-passport.serializeUser(Manager.serializeUser());
-passport.deserializeUser(Manager.deserializeUser());
+// passport.use(Manager.createStrategy());
+// passport.serializeUser(Manager.serializeUser());
+// passport.deserializeUser(Manager.deserializeUser());
 
 // const loginchecker = function(req,res,next){
 //   if (req.path != '/login' && req.path != '/register' && !req.session.user){
@@ -74,17 +78,19 @@ passport.deserializeUser(Manager.deserializeUser());
 // server.use(loginchecker)
 
 //setting up Routes
-
+app.use('/', loginRoutes);
+app.use('/', salesRoutes);
+app.use('/', purchasesRoutes);
 
 
 
 // Non Existing Routes and Server Port
 // handling non existing routes
-server.get('*', (req, res) => {
+app.get('*', (req, res) => {
   res.status(404).send('OOPS! WRONG ADDRESS');
 });
 
 // server
-server.listen(3002, () => console.log('Listening on Port 3002'));
+app.listen(3002, () => console.log('Listening on Port 3002'));
 
 
