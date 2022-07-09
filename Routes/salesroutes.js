@@ -9,8 +9,8 @@ router.get('/sales', (req, res) => {
     res.render('sales')
 });
 //debtor routes
-router.get('/debtors', (req, res) => {
-    res.render('debtors')
+router.get('/credit', (req, res) => {
+    res.render('credit')
 });
 
 //requiiring models

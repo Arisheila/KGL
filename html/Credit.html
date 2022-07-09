@@ -4,39 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produce sold on Credit (Debtors)</title>
+    <title>Credit Sales Portal</title>
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/login.css">
     <link rel="stylesheet" href="/assets/css/page.css">
 </head>
 <body onload="firstFocus()">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <img src="/img/logokgl.jpeg" alt="">
-      <a class="navbar-brand" href="#">KGL</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/html/kgl.html">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/html/login.html">LOG IN</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/html/kgl.html">LOG OUT</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <img src="/img/logokgl.jpeg" alt="">
+          <a class="navbar-brand" href="#">KGL</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  SALES
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/sales">Sales Input</a></li>
+                  <li><a class="dropdown-item" href="#">Sales Records</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  PROCUREMENT
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/purchases">Procurement Input</a></li>
+                  <li><a class="dropdown-item" href="#">Procurement Records</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  CREDIT SALES
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/credit">Credit Sales Input</a></li>
+                  <li><a class="dropdown-item" href="#">Credit Sales Records</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  REGISTER
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Register Here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/landing">LOGOUT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <div class="container">
         <form name="registration" onblur="firstFocus()">
-            <div class="brand-title">DEBTORS</div>
+            <div class="brand-title">Credit Sales Input</div>
             <div class="inputs">
                 <div class="row">
                     <div class="tableRow col">
@@ -92,6 +120,14 @@
                         <label>Date of dispatch</label>
                         <input type="datetime-local" name="dispatch"onblur="valDispatch()">
                     </div>
+                    <div class="tableRow col">
+                        <label >Branch</label>
+                        <select name="branch">
+                          <option value = "default">Branch Name</option>
+                          <option value="Gga">Ggaba</option>
+                          <option value="nt">Ntinda</option>
+                          </select>
+                      </div>
                 </div>
                 <div>
                     <label></label>
@@ -104,6 +140,6 @@
 <span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
 
 <script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
-<script src ="/javascript/debtor.js"></script>
+<script src ="/javascript/credit.js"></script>
 </body>
 </html> 
