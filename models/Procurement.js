@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const passportLocalMongoose = require("passport-local-mongoose");
 
 const ProcurementSchema = new mongoose.Schema({
-    nameofProduce: {
+  nameofProduce: {
     type: String,
   },
   goods: {
@@ -32,7 +32,7 @@ const ProcurementSchema = new mongoose.Schema({
   
   },
   pricetosold:{
-    type:String,
+    type:Number,
   
   },
 

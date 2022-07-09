@@ -3,12 +3,13 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const Sales = require('../models/Sales')
+const Credit = require('../models/Credit')
 const router = express.Router();
 
 router.get('/sales', (req, res) => {
     res.render('sales')
 });
-//debtor routes
+//credit  routes
 router.get('/credit', (req, res) => {
     res.render('credit')
 });
@@ -23,6 +24,19 @@ router.post('/sales', async(req,res)=>{
     }
     catch(err){
         res.status(400).render('sales')
+    }
+})
+
+// requiring models for credit model
+router.post('/credit', async(req,res)=>{
+    try{
+        const credit = new Credit(req.body);
+        await credit.save()
+        res.redirect('/creditlist')
+        console.log(req.body)
+    }
+    catch(err){
+        res.status(400).render('credit')
     }
 })
 

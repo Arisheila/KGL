@@ -15,6 +15,7 @@ const expressSession = require('express-session')({
 const loginRoutes = require("./routes/loginroutes")
 const salesRoutes = require("./routes/salesroutes")
 const purchasesRoutes = require("./routes/procurementroutes")
+const registerRoutes = require("./routes/registerRoutes")
 
 
 
@@ -81,6 +82,7 @@ app.use(passport.session());
 app.use('/', loginRoutes);
 app.use('/', salesRoutes);
 app.use('/', purchasesRoutes);
+app.use('/',registerRoutes);
 
 
 

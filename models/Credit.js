@@ -11,7 +11,7 @@ const CreditSchema = new mongoose.Schema({
   },
 
   location:{
-    type:Date,
+    type:String,
   },
   contact:{
     type:Number,
@@ -28,7 +28,7 @@ const CreditSchema = new mongoose.Schema({
   
   },
   date:{
-    type:String,
+    type:Date,
   
   },
   nameofproduce:{
