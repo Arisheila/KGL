@@ -139,6 +139,22 @@ const valBran =() => {
         
     };
     
+    const valTon = ()=>{
+        let tonn = document.registration.tonnage;
+        let ton = /[0-9]/; 
+        if(
+            tonn.value.length <=3 || !tonn.value.match(ton)
+        ){
+            tonn.style.border ='2px solid red'
+            return false;
+        }
+        else{
+            tonn.style.border='2px solid brown'
+            return true;
+        }
+      
+    };
+    
 
 const valTonnage = () =>{
     const ton = document.registration.tonnage;

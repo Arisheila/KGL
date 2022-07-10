@@ -98,6 +98,9 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
             option(value='default') Branch Name
             option(value='Ggaba') Ggaba
             option(value='Ntinda') Ntinda
+        .tableRow.col
+            label Tonnage (kgs)
+            input(type='numeric' name='tonnage' onblur='valTon()')      
       div
         label
         button#mybutton.btnc(type='submit') Submit

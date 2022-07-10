@@ -63,6 +63,8 @@ const valTon = ()=>{
     }
   
 };
+
+
 const valCost =()=>{
     let cost =document.registration.thecost;
     let costt = /[0-9]/;
