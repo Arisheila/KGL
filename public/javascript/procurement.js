@@ -106,20 +106,20 @@ const valContact =() =>{
     }
 };
 
-// const valBran =() => {
-//     let branchy = document.registration.branch;
-//     if(
-//         branchy == 'default'
-//     ){
-//         branchy.style.border ='2px Solid red'
-//         return false;
-//     }
-//     else {
-//         branchy.style.border='2px solid green'
-//         return true;
-//     }
+const valBran =() => {
+    let branchy = document.registration.branch;
+    if(
+        branchy.value == 'default'
+    ){
+        branchy.style.border ='2px Solid red'
+        return false;
+    }
+    else {
+        branchy.style.border='2px solid brown'
+        return true;
+    }
     
-// };
+};
 
 let valPrice = (pricey,paiderror)=>{
     let price = /[0-9]/;

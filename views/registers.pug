@@ -43,7 +43,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
             | REGISTER
           ul.dropdown-menu(aria-labelledby='navbarDropdown')
             li
-              a.dropdown-item(href='#') Register Here
+              a.dropdown-item(href='/register') Register Here
         li.nav-item
           a.nav-link(href='/landing') LOGOUT
 .container
@@ -55,7 +55,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
           label First Name
           input(type='text' name='firstname' onblur='frname()')
         .tableRow.col
-          label Sur Name
+          label Surname
           input(type='text' name='surname' onblur='valSec()')
       .row
         .col-6
@@ -75,6 +75,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
         .tableRow.col
           label EMAIL
           input(type='email' name='email' placeholder='example@test.com' onblur='valEmail()')
+      .row    
         .tableRow.col
           label PASSWORD
           input(type='password' name='password' placeholder='Min 4 charaters' onblur='valPass()')

@@ -122,7 +122,8 @@ h1 {
 }
 
 .navbar{
-  background-color: #C4A484!important;
+  background-color: #583b1d!important;
+  
 
 }
 #footer-content {
@@ -143,4 +144,5 @@ width:80px;
 }
 .dropdown-item{
   font-size: 15px;
+  color:#2b180d
 }

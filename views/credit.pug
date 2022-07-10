@@ -44,7 +44,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
             | REGISTER
           ul.dropdown-menu(aria-labelledby='navbarDropdown')
             li
-              a.dropdown-item(href='#') Register Here
+              a.dropdown-item(href='/register') Register Here
         li.nav-item
           a.nav-link(href='/landing') LOGOUT
 .container
@@ -77,21 +77,27 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
           label Due Date:
           input(type='datetime-local' name='date' onblur='valDate()')
         .tableRow.col
-          label Produce name
-          input(type='alphanumeric' name='nameofproduce' onblur='valProduce()')
+          label Date of dispatch
+          input(type='datetime-local' name='dispatch' onblur='valDispatch()')  
+        
       .row
         .tableRow.col
-          label Tonnage
-          input(type='numeric' name='tonnage' onblur='valTonnage()')
-        .tableRow.col
-          label Date of dispatch
-          input(type='datetime-local' name='dispatch' onblur='valDispatch()')
+          label Produce name
+          select(name='nameofproduce' onblur='valProduce()')
+            option(value='default') Produce Name
+            option(value='Beans') Beans
+            option(value='Grain') Grain
+            option(value='Maize') Maize
+            option(value='cowpeas') Cowpeas
+            option(value='G_nuts') G-nuts
+            option(value='Soya Beans') Soya Beans
+
         .tableRow.col
           label Branch
-          select(name='branch')
+          select(name='branch' onblur="valBran()")
             option(value='default') Branch Name
-            option(value='Gga') Ggaba
-            option(value='nt') Ntinda
+            option(value='Ggaba') Ggaba
+            option(value='Ntinda') Ntinda
       div
         label
         button#mybutton.btnc(type='submit') Submit

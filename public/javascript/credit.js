@@ -97,19 +97,48 @@ const valDate = () =>{
     
 };
 
-const valProduce = () =>{
-    const prod =document.registration.nameofproduce;
-    const duce = /^[a-zA-Z0-9]+$/;
-    if(prod.value.length < 2 || !prod.value.match(duce)){
-        prod.style.border= '2px solid red';
+// const valProduce = () =>{
+//     const prod =document.registration.nameofproduce;
+//     const duce = /^[a-zA-Z0-9]+$/;
+//     if(prod.value.length < 2 || !prod.value.match(duce)){
+//         prod.style.border= '2px solid red';
+//         return false;
+//     }
+//     else{
+//         prod.style.border='2px solid brown'
+//         return true;
+//     }
+// };
+
+const valProduce =() => {
+    let prod =document.registration.nameofproduce;
+    if(
+        prod.value == 'default'
+    ){
+        prod.style.border ='2px Solid red'
         return false;
     }
-    else{
-        prod.style.border='2px solid brown'
+    else {
+        prod.style.border='2px solid green'
         return true;
     }
+    
 };
-
+const valBran =() => {
+        let branchy = document.registration.branch;
+        if(
+            branchy.value == 'default'
+        ){
+            branchy.style.border ='2px Solid red'
+            return false;
+        }
+        else {
+            branchy.style.border='2px solid green'
+            return true;
+        }
+        
+    };
+    
 
 const valTonnage = () =>{
     const ton = document.registration.tonnage;
