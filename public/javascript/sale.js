@@ -11,7 +11,7 @@ const valProd =() => {
         return false;
     }
     else {
-        produce.style.border='2px solid brown'
+        produce.style.border='2px solid white'
         return true;
     }
     
@@ -25,7 +25,7 @@ const valTonnage = () =>{
         return false;
     }
     else{
-        ton.style.border ='2px solid brown';
+        ton.style.border ='2px solid white';
         return true;
     }
 }
@@ -38,7 +38,7 @@ const valPaid = () =>{
         return false;
     }
     else{
-        paid.style.border ='2px solid brown';
+        paid.style.border ='2px solid white';
         return true;
     }
 };
@@ -52,7 +52,7 @@ const valBuyer =() =>{
         return false;
     }
     else{
-        buyer.style.border ='2px solid brown';
+        buyer.style.border ='2px solid white';
         return true;
     }
 };
@@ -66,7 +66,7 @@ const valSale = () =>{
         return false;
     }
     else{
-        salee.style.border ='2px solid brown';
+        salee.style.border ='2px solid white';
         return true;
     }
 };
@@ -80,7 +80,7 @@ const valDate = () =>{
         return false;
     }
     else {
-        ddate.style.border ='2px solid brown'
+        ddate.style.border ='2px solid white'
         return true;
     }
     
@@ -95,7 +95,7 @@ const valBran =() => {
         return false;
     }
     else {
-        branchy.style.border='2px solid brown'
+        branchy.style.border='2px solid white'
         return true;
     }
     

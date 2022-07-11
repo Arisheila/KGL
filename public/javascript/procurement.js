@@ -12,26 +12,26 @@ if(
     return false;
 }
 else{
-    nopp.style.border='2px Solid brown'
+    nopp.style.border='2px Solid white'
     return true;
 }
 
 };
 
-const valueTop =() => {
-    let topp =document.registration.goods;
-    if(
-        topp.value == 'default'
-    ){
-        topp.style.border ='2px Solid red'
-        return false;
-    }
-    else {
-        topp.style.border='2px solid brown'
-        return true;
-    }
+// const valueTop =() => {
+//     let topp =document.registration.goods;
+//     if(
+//         topp.value == 'default'
+//     ){
+//         topp.style.border ='2px Solid red'
+//         return false;
+//     }
+//     else {
+//         topp.style.border='2px solid brown'
+//         return true;
+//     }
     
-};
+// };
 
 const valdate = () =>{
     let datte = document.registration.date;
@@ -42,7 +42,7 @@ const valdate = () =>{
         return false;
     }
     else {
-        datte.style.border ='2px solid brown'
+        datte.style.border ='2px solid white'
         return true;
     }
     
@@ -58,7 +58,7 @@ const valTon = ()=>{
         return false;
     }
     else{
-        tonn.style.border='2px solid brown'
+        tonn.style.border='2px solid white'
         return true;
     }
   
@@ -75,7 +75,7 @@ const valCost =()=>{
         return false;
     }
     else{
-        cost.style.border='2px solid brown'
+        cost.style.border='2px solid white'
         return true;
     }
     
@@ -89,7 +89,7 @@ const valDealer =() =>{
         return false;
     }
     else{
-        dealer.style.border ='2px solid brown';
+        dealer.style.border ='2px solid white';
         return true;
     }
    
@@ -99,7 +99,7 @@ const valContact =() =>{
     const contact = document.registration.contact;
     const contactFormat= /[0-9]/;
     if(contact.value.match(contactFormat) && contact.value.length == 10){
-        contact.style.border ='2px solid brown';
+        contact.style.border ='2px solid white';
         return true; 
     }
     else{
@@ -117,7 +117,7 @@ const valBran =() => {
         return false;
     }
     else {
-        branchy.style.border='2px solid brown'
+        branchy.style.border='2px solid white'
         return true;
     }
     
@@ -138,6 +138,19 @@ let valPrice = (pricey,paiderror)=>{
     }
 }
 
+const valTop =() =>{
+    let top= document.registration.goods;
+    let toppe = /^[a-zA-Z]+$/;
+    if(!top.value.match(toppe)|| top.value.length < 2){
+        top.style.border ='2px solid red';
+        return false;
+    }
+    else{
+        top.style.border ='2px solid white';
+        return true;
+    }
+   
+};
 
 
 

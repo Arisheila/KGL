@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Purchases Portal</title>
-  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/css/login.css">
-  <link rel ="stylesheet" href ="/assets/css/page.css">
-  <link rel="stylesheet" href="/assets/css/sales.css">
+  <link rel="stylesheet" href="/public/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/assets/css/login.css">
+  <link rel ="stylesheet" href ="/pulic/assets/css/page.css">
+  <link rel="stylesheet" href="/public/assets/css/sales.css">
 </head>
 <body onload ="firstFocus()">
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <img src="/img/logokgl.jpeg" alt="">
+      <img src="/public/img/logokgl.jpeg" alt="">
       <a class="navbar-brand" href="#">KGL</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -84,16 +84,9 @@
 
           <div class="tableRow col">
             <label>Type of produce:</label>
-            <select name="goods" id="" onblur="valueTop()">
-              <option value = "default"> Please select type of goods</option>
-              <option value = "Beans">Beans</option>
-              <option value = "Grain">Grain</option>
-              <option value = "Maize">Maize</option>
-              <option value = "cpeas">Cowpeas</option>
-              <option value = "G_nuts">G-nuts</option>
-              <option value = "Soya Beans">Soya Beans</option>
-              </select>
+            <input type="alphabets" name="goods" onblur="valTop()">
           </div>
+
         <div class="tableRow col">
           <label >Branch</label>
           <select name="branch">
@@ -150,8 +143,8 @@
       
 <span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
 
-<script src="/assets/bootstrap/js/bootstrap.bundle.js"> </script>
-<script src ="/javascript/procurement.js"></script>
+<script src="/public/assets/bootstrap/js/bootstrap.bundle.js"> </script>
+<script src ="/public/javascript/procurement.js"></script>
       
 </body>
 </html> 

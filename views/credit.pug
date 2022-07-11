@@ -100,7 +100,11 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
             option(value='Ntinda') Ntinda
         .tableRow.col
             label Tonnage (kgs)
-            input(type='numeric' name='tonnage' onblur='valTon()')      
+            input(type='numeric' name='tonnage' onblur='valTon()')
+        .row 
+          .tableRow.col   
+            label Type of Produce:
+            input(type='alphabets' name="goods" onblur='valTop()')          
       div
         label
         button#mybutton.btnc(type='submit') Submit

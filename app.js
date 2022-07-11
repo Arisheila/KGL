@@ -37,6 +37,7 @@ const registerRoutes = require("./routes/registerRoutes")
 
 // Database
 const config = require('./config/database');
+const Signup = require('./models/Signup');
 
 //Initialising server, the variable server can be named anything and be used like that throughout the calling in the routes file 
 const app = express();
@@ -66,9 +67,9 @@ app.use(expressSession);
 app.use(passport.initialize());
 app.use(passport.session());
 
-// passport.use(Manager.createStrategy());
-// passport.serializeUser(Manager.serializeUser());
-// passport.deserializeUser(Manager.deserializeUser());
+passport.use(Signup.createStrategy());
+passport.serializeUser(Signup.serializeUser());
+passport.deserializeUser(Signup.deserializeUser());
 
 // const loginchecker = function(req,res,next){
 //   if (req.path != '/login' && req.path != '/register' && !req.session.user){

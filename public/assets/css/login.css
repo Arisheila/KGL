@@ -53,7 +53,7 @@ input {
 
 .inputs {
   text-align: left;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 label, input, button {
@@ -123,7 +123,6 @@ h1 {
 
 .navbar{
   background-color: #583b1d!important;
-  
 
 }
 #footer-content {
@@ -141,6 +140,7 @@ body{
 .navbar img {
 height:60px;
 width:80px;
+
 }
 .dropdown-item{
   font-size: 15px;

@@ -91,10 +91,16 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
           .tableRow.col
             label Contact:
             input(type='numeric' name='contact' placeholder='0705522174' onblur='valContact()')
+        .row 
+          .tableRow.col   
+            label Type of Produce:
+            input(type='alphabets' name="goods" onblur='valTop()')
+                 
         .row
-          .tableRow
+          .tableRow.col
             label
             button(type='submit') Submit
+        
 span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')
 script(src='/javascript/procurement.js')

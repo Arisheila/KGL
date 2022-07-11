@@ -12,7 +12,7 @@ const valBuyer = () => {
         return false;
     }
     else{
-        buyer.style.border='2px Solid brown'
+        buyer.style.border='2px Solid white'
         return true;
          }
     };
@@ -20,7 +20,7 @@ const valBuyer = () => {
         const nin = document.registration.nationalid;
         const ninValid = /^[a-zA-Z0-9]+$/;
         if(nin.value.match(ninValid) && nin.value.length == 14){
-            nin.style.border ='2px solid brown';
+            nin.style.border ='2px solid white';
             return true; 
         }
         else{
@@ -37,7 +37,7 @@ const valLoc = () =>{
         return false;
     }
     else{
-        loc.style.border='2px solid brown'
+        loc.style.border='2px solid white'
         return true;
     }
 };
@@ -46,7 +46,7 @@ const valCon=() =>{
     const contt = document.registration.contact;
     const contactFormat= /[0-9]/;
     if(contt.value.match(contactFormat) && contt.value.length == 10){
-        contt.style.border ='2px solid brown';
+        contt.style.border ='2px solid white';
         return true; 
     }
     else{
@@ -63,7 +63,7 @@ const valDue = () =>{
         return false;
     }
     else{
-        due.style.border='2px solid brown'
+        due.style.border='2px solid white'
         return true;
     }
 };
@@ -76,7 +76,7 @@ const valAgent = () =>{
         return false;
     }
     else{
-        sagent.style.border='2px solid brown'
+        sagent.style.border='2px solid white'
         return true;
     }
 };
@@ -91,7 +91,7 @@ const valDate = () =>{
         return false;
     }
     else {
-        ddate.style.border ='2px solid brown'
+        ddate.style.border ='2px solid white'
         return true;
     }
     
@@ -119,7 +119,7 @@ const valProduce =() => {
         return false;
     }
     else {
-        prod.style.border='2px solid green'
+        prod.style.border='2px solid white'
         return true;
     }
     
@@ -133,7 +133,7 @@ const valBran =() => {
             return false;
         }
         else {
-            branchy.style.border='2px solid green'
+            branchy.style.border='2px solid white'
             return true;
         }
         
@@ -149,10 +149,24 @@ const valBran =() => {
             return false;
         }
         else{
-            tonn.style.border='2px solid brown'
+            tonn.style.border='2px solid white'
             return true;
         }
       
+    };
+    
+    const valTop =() =>{
+        let top= document.registration.goods;
+        let toppe = /^[a-zA-Z]+$/;
+        if(!top.value.match(toppe)|| top.value.length < 2){
+            top.style.border ='2px solid red';
+            return false;
+        }
+        else{
+            top.style.border ='2px solid white';
+            return true;
+        }
+       
     };
     
 
@@ -164,7 +178,7 @@ const valTonnage = () =>{
         return false;
     }
     else{
-        ton.style.border ='2px solid brown';
+        ton.style.border ='2px solid white';
         return true;
     }
 }
@@ -178,7 +192,7 @@ const valDispatch = () =>{
         return false;
     }
     else {
-        dispatchDate.style.border ='2px solid brown'
+        dispatchDate.style.border ='2px solid white'
         return true;
     }
     

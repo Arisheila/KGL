@@ -10,7 +10,7 @@ const frname =()=>{
         return false;
     }
     else{
-        firste.style.border ='2px solid brown';
+        firste.style.border ='2px solid white';
         return true;
     }
 };
@@ -23,7 +23,7 @@ const valSec =()=>{
         return false;
     }
     else{
-        secn.style.border ='2px solid brown';
+        secn.style.border ='2px solid white';
         return true;
     }
 };
@@ -37,7 +37,7 @@ const valBran = () =>{
         return false;
     }
     else {
-        branchee.style.border ='2px solid brown'
+        branchee.style.border ='2px solid white'
         return true;
     }
     
@@ -52,7 +52,7 @@ const valRole = () =>{
         return false;
     }
     else {
-        role.style.border ='2px solid brown'
+        role.style.border ='2px solid white'
         return true;
     }
     
@@ -68,7 +68,7 @@ const valPass = () =>{
         return false;
     }
     else {
-        pass.style.border ='2px solid brown'
+        pass.style.border ='2px solid white'
         return true;
     }
     
@@ -100,7 +100,7 @@ const valPasso = () =>{
         return false;
     }
     else {
-        pass.style.border ='2px solid brown'
+        pass.style.border ='2px solid white'
         return true;
     }
     

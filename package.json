@@ -1,7 +1,6 @@
 {
-  "name": "tashanodejs",
+  "name": "kgl",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,5 +19,14 @@
     "passport": "^0.6.0",
     "passport-local-mongoose": "^7.1.2",
     "pug": "^3.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arisheila/KGL.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Arisheila/KGL/issues"
+  },
+  "homepage": "https://github.com/Arisheila/KGL#readme",
+  "description": ""
 }

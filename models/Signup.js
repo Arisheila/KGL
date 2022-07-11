@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const passportLocalMongoose = require("passport-local-mongoose");
 
-const SignupSchema = new mongoose.Schema({
+const signupSchema = new mongoose.Schema({
     firstname: {
     type: String,
   },
@@ -33,5 +33,5 @@ const SignupSchema = new mongoose.Schema({
 });
 
 // Export Model
-
-module.exports = mongoose.model("Signup", SignupSchema);
+signupSchema.plugin(passportLocalMongoose, { usernameField: "email" });
+module.exports = mongoose.model("Signup", signupSchema);
