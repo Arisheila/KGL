@@ -90,7 +90,7 @@ input {
 button {
   color: white;
   margin-top: 20px;
-  background:#2b180d;
+  background:#583b1d;
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
@@ -145,4 +145,15 @@ width:80px;
 .dropdown-item{
   font-size: 15px;
   color:#2b180d
+}
+.nav-link {
+  color:#fff;
+
+}
+.nav-link:hover {
+  color:#fff;
+
+}
+.navbar-brand{
+  color: #fff;
 }
