@@ -14,7 +14,7 @@ router.post('/purchases', async(req,res)=>{
     try{
         const procurement = new Procurement(req.body);
         await procurement.save()
-        res.redirect('/procurementlist')
+        res.redirect('/purchases')
         console.log(req.body)
     }
     catch(err){

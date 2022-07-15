@@ -6,17 +6,44 @@ const ProcurementSchema = new mongoose.Schema({
   nameofProduce: {
     type: String,
   },
-  goods: {
+
+  branch:{
     type:String,
+  
   },
 
   date:{
     type:Date,
   },
+
   tonnage:{
     type:Number,
   
   },
+  thecost:{
+    type:Number,
+
+  },
+
+  nameofthedealer:{
+    type:String,
+  },
+
+  pricetosold:{
+    type:Number,
+  
+  },
+
+  contact:{
+    type:Number,
+  },
+
+  goods: {
+    type:String,
+  },
+
+  
+ 
 
   cost:{
     type:Number,
@@ -27,14 +54,8 @@ const ProcurementSchema = new mongoose.Schema({
     type:String,
   
   },
-  branch:{
-    type:String,
   
-  },
-  pricetosold:{
-    type:Number,
   
-  },
 
 
 

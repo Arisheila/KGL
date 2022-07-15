@@ -2,32 +2,37 @@ const mongoose = require("mongoose");
 
 const passportLocalMongoose = require("passport-local-mongoose");
 
-const SalesSchema = new mongoose.Schema({
+const salesSchema = new mongoose.Schema({
     producename: {
     type: String,
   },
-  tonnage: {
+  branch:{
     type:String,
   },
 
   amountpaid:{
     type:String,
   },
+
   buyername:{
     type: String,
   
   },
-
-  agentsname:{
-    type: String,
-
-  },
-
   dateandtime:{
     type:Date,
   
   },
 
+  tonnage: {
+    type:String,
+  },
+
+  
+
+  agentsname:{
+    type: String,
+
+  },
 
 
 
@@ -36,4 +41,4 @@ const SalesSchema = new mongoose.Schema({
 
 // Export Model
 
-module.exports = mongoose.model("Sales", SalesSchema);
+module.exports = mongoose.model("Sale", salesSchema);

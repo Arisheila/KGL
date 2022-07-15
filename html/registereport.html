@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGL REGISTER FORM</title>
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/login.css"> 
+</head>
+<body onload="firstFocus()">
+
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <img src="/img/logokgl.jpeg" alt="">
+      <a class="navbar-brand" href="#">KGL</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              SALES
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/sales">Sales Input</a></li>
+              <li><a class="dropdown-item" href="#">Sales Records</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PROCUREMENT
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/purchases">Procurement Input</a></li>
+              <li><a class="dropdown-item" href="#">Procurement Records</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              CREDIT SALES
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/credit">Credit Sales Input</a></li>
+              <li><a class="dropdown-item" href="#">Credit Sales Records</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              REGISTER
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Register Here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/landing">LOGOUT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+<div class="container">
+    <form name="registration">
+        <div class="brand-title">REGISTER HERE</div>
+        <div class="inputs">
+            <div class="row">
+                <div class="tableRow col">
+                    <label >First Name</label>
+                    <input type="text" name="firstname">
+                </div>
+                <div class="tableRow col">
+                    <label>Sur Name</label>
+                    <input type="text" name="surname">
+                </div>   
+            </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label >Branch</label>
+                            <select name="branch">
+                              <option value = "default">Branch Name</option>
+                                <option value="ka">Kampala</option>
+                                <option value="ma">Mbarara</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label >Role</label>
+                            <select name="role">
+                              <option value = "default">Role</option>
+                                <option value="ka">Director</option>
+                                <option value="ma">Manager</option>
+                                <option value="ma">Sales Agents</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="tableRow col">
+                            <label>EMAIL</label>
+                            <input type="email"name="email" placeholder="example@test.com" />
+                        </div>
+                        <div class="tableRow col">
+                            <label>PASSWORD</label>
+                            <input type="password"name="password" placeholder="Min 4 charaters"/>
+
+                        </div>   
+                    </div>
+                    <button type="submit">Register</button>
+    </form>
+
+</div>
+
+
+<span id="footer-content">&copy; 2022 Copyright: Arinaitwe Sheila</span>
+
+<script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
+
+
+</body>
+</html>

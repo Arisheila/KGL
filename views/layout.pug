@@ -4,11 +4,8 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Sales Portal
-    link(rel='stylesheet', href='/assets/bootstrap/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/assets/css/login.css')
-    link(rel='stylesheet', href='/assets/css/page.css')
-    link(rel='stylesheet', href='/assets/css/sales.css')
+    title Credit Sales Portal
+    link(rel='stylesheet', href='/assets/css/trial.css')
   body(onload='firstFocus()')
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
       .container-fluid
@@ -47,56 +44,9 @@ html(lang='en')
                 | REGISTER
               ul.dropdown-menu(aria-labelledby='navbarDropdown')
                 li
-                  a.dropdown-item(href="/register") Register Here
+                  a.dropdown-item(href='/register') Register Here
                 li
-                  a.dropdown-item(href='/report/register') Register Records  
+                  a.dropdown-item(href='/report/register') Register Records    
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
-    |  
-    .container
-      form(name='registration', onblur='firstFocus()' action="/sales" method="POST")
-        .brand-title Sales Input
-        .inputs
-          .row
-            .tableRow.col
-              label Name of produce(kgs):
-              select(name='producename', id='', onblur='valProd()')
-                option(value='default')  Select name of produce
-                option(value='Beans') Beans
-                option(value='Grain') Grain
-                option(value='Maize') Maize
-                option(value='cowpeas') Cowpeas
-                option(value='G_nuts') G-nuts
-                option(value='Soya Beans') Soya Beans
-            .tableRow.col
-              label Branch
-              select(name='branch', onblur='valBran()')
-                option(value='default') Branch Name
-                option(value='Ggaba') Ggaba
-                option(value='ntinda') Ntinda
-          .row
-            .tableRow.col
-              label Amount paid(ugx)
-              input(type='alphanumeric', name='amountpaid', onblur='valPaid()')
-            .tableRow.col
-              label Buyer&apos;s Name:
-              input(type='alphanumeric', name='buyername', onblur='valBuyer()')
-          .row
-            .tableRow.col
-              label Sales agent&apos;s name:
-              input(type='alphanumeric', name='agentsname', onblur='valSale()')
-            .tableRow.col
-              label Date and Time 
-              input(type='datetime-local', name='dateandtime', onblur='valDate()')
-          .row
-            .tableRow.col
-              label Tonnage (kgs)
-              input(type='alphanumeric', name='tonnage', onblur='valTonnage()')
-          .row
-            div
-              label
-              button#mybutton.btnc Submit
-    |  
-    span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
-    script(src='/assets/bootstrap/js/bootstrap.bundle.js')
-    script(src='/javascript/sale.js')
+    block content   

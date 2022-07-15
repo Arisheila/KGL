@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const passportLocalMongoose = require("passport-local-mongoose");
 
-const CreditSchema = new mongoose.Schema({
+const creditSchema = new mongoose.Schema({
     buyername: {
     type: String,
   },
@@ -17,35 +17,43 @@ const CreditSchema = new mongoose.Schema({
     type:Number,
   
   },
-
+  salesagent:{
+    type:String,
+  
+  },
   amountdue:{
     type:Number,
 
   },
 
-  salesagent:{
+  dispatch:{
     type:String,
   
   },
+  
   date:{
     type:Date,
   
   },
+  goods:{
+    type:String,
+  },
+
   nameofproduce:{
     type:String,
   
+  },
+  branch:{
+    type:String,
+
   },
   tonnage:{
     type:String,
   
   },
-  dispatch:{
-    type:String,
   
-  },
-
 });
 
 // Export Model
 
-module.exports = mongoose.model("Credit", CreditSchema);
+module.exports = mongoose.model("Credit", creditSchema);

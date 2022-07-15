@@ -19,11 +19,11 @@ router.post('/sales', async(req,res)=>{
     try{
         const sales = new Sales(req.body);
         await sales.save()
-        res.redirect('/saleslist')
+        res.redirect('/sale')
         console.log(req.body)
     }
     catch(err){
-        res.status(400).render('sales')
+        res.status(400).render('sale')
     }
 })
 
@@ -39,6 +39,19 @@ router.post('/credit', async(req,res)=>{
         res.status(400).render('credit')
     }
 })
+
+
+router.get('/report/sales',async (req, res) => {
+    try{
+        let sale = await Sales.find();
+        res.render('salesreport')
+
+    }
+    catch(err){
+        console.log(err)
+        res.send('failed to retrive salaes details')
+    }
+});
 
 // router.get('/lists',async (req, res) => {
 //     try{

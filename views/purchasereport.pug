@@ -1,0 +1,42 @@
+extends layout 
+block content
+    body.collections
+        .container 
+         h2.reg Credit List.
+         table.table.table-washers 
+            thead
+                tr
+                    th Name of produce(kgs)
+                    th Branch 
+                    th Date/Time of produce
+                    th Tonnage(kgs)
+                    th Cost(ugx)
+                    th Name of the dealer
+                    th Price to be sold
+                    th Contact
+                    th Type of Produce
+                    
+                tbody
+                if products.length
+                    each product in products
+                        tr
+                            td #{signup.nameofProduce}
+                            //name and email have to match exactly with models database file as they are written in small case
+                            td #{signup.branch}
+                            td #{signup.date}
+                            td #{signup.thecost}
+                            td #{signup.nameofthedealer}
+                            td #{signup.pricetosold}
+                            td #{signup.date}
+                            td #{signup.goods}
+
+
+
+                                a.button2(href="/products/edit/"+product._id) Edit 
+                                
+                            td
+                                form.delete(method="post" action='/products/delete')
+                                    input(type="hidden", placeholder="", name="id", value=product._id)
+                                    button.button2(type="submit") Delete
+
+                                   

@@ -512,15 +512,11 @@ section {
 .hero:before {
   position: absolute;
   content: "";
-  background: rgba(27, 47, 69, 0.6);
+  /* background: rgba(27, 47, 69, 0.6); */
   inset: 0;
 }
 
-@media (max-width: 1034px) {
-  .hero:before {
-    background: rgba(27, 47, 69, 0.7);
-  }
-}
+
 
 .hero .container {
   z-index: 1;

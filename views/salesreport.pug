@@ -1,0 +1,96 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sales Portal
+  link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/assets/css/trial.css')
+    //- link(rel='stylesheet' href='/assets/css/page.css')
+    //- link(rel='stylesheet' href='/assets/css/sales.css')
+body
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+.container-fluid
+  img(src='/img/logokgl.jpeg' alt='')
+  a.navbar-brand(href='#') KGL
+  button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.me-auto.mb-2.mb-lg-0
+      li.nav-item.dropdown
+        a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+          | SALES
+        ul.dropdown-menu(aria-labelledby='navbarDropdown')
+          li
+            a.dropdown-item(href='/sales') Sales Input
+          li
+            a.dropdown-item(href='#') Sales Records
+      li.nav-item.dropdown
+        a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+          | PROCUREMENT
+        ul.dropdown-menu(aria-labelledby='navbarDropdown')
+          li
+            a.dropdown-item(href='/purchases') Procurement Input
+          li
+            a.dropdown-item(href='#') Procurement Records
+      li.nav-item.dropdown
+        a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+          | CREDIT SALES
+        ul.dropdown-menu(aria-labelledby='navbarDropdown')
+          li
+            a.dropdown-item(href='/credit') Credit Sales Input
+          li
+            a.dropdown-item(href='#') Credit Sales Records
+      li.nav-item.dropdown
+        a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+          | REGISTER
+        ul.dropdown-menu(aria-labelledby='navbarDropdown')
+          li
+            a.dropdown-item(href='/register') Register Here
+          li
+            a.dropdown-item(href='/report/register') Register Records
+
+      li.nav-item
+        a.nav-link(href='/landing') LOGOUT
+.container 
+  h2.reg Sales Report.
+  table.table. 
+  thead
+    tr
+      th Name of produce(kgs)
+      th Branch
+      th Amount paid(ugx)
+      th Buyer's Name:
+      th Sales agent's name:
+      th Date and Time
+      th Tonnage
+      th Delete 
+      th Edit 
+
+    tbody
+      if sales.length
+        each sale in sales
+          tr
+            td #{sales.producename}
+            //name and email have to match exactly with models database file as they are written in small case
+            td #{sales.branch}
+            td #{sales.amountpaid}
+            td #{sales.buyername}
+            td #{sales.agentsname}
+            td #{sales.dateandtime}
+            td #{sales.tonnage}
+
+              a.button2(href="/sales/edit/"+product._id) Edit 
+
+td
+  form.delete(method="post" action='/products/delete')
+    input(type="hidden", placeholder="", name="id", value=product._id)
+    button.button2(type="submit") Delete
+
+
+span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
+script(src='/assets/bootstrap/js/bootstrap.bundle.js')
+script(src='/javascript/sale.js')
+
+
+

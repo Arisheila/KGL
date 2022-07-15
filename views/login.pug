@@ -1,61 +1,63 @@
 doctype html
-head
-  meta(charset='UTF-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title KGL STAFF LOGIN
-  link(href='/assets/bootstrap/css/bootstrap.min.css' rel='stylesheet')
-  link(rel='stylesheet' href='/assets/css/login.css')
-// navbar
-nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  .container-fluid
-    img(src='/img/logokgl.jpeg' alt='')
-    a.navbar-brand(href='#') KGL
-    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    #navbarSupportedContent.collapse.navbar-collapse
-      ul.navbar-nav.me-auto.mb-2.mb-lg-0
-        //- li.nav-item.dropdown
-        //-   a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-        //-     | SALES
-        //-   ul.dropdown-menu(aria-labelledby='navbarDropdown')
-        //-     li
-        //-       a.dropdown-item(href='/sales') Sales Input
-        //-     li
-        //-       a.dropdown-item(href='#') Sales Records
-        //- li.nav-item.dropdown
-        //-   a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-        //-     | PROCUREMENT
-        //-   ul.dropdown-menu(aria-labelledby='navbarDropdown')
-        //-     li
-        //-       a.dropdown-item(href='/purchases') Procurement Input
-        //-     li
-        //-       a.dropdown-item(href='#') Procurement Records
-        //- li.nav-item.dropdown
-        //-   a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-        //-     | CREDIT SALES
-        //-   ul.dropdown-menu(aria-labelledby='navbarDropdown')
-        //-     li
-        //-       a.dropdown-item(href='/credit') Credit Sales Input
-        //-     li
-        //-       a.dropdown-item(href='#') Credit Sales Records
-        li.nav-item.dropdown
-          a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-            | REGISTER
-          ul.dropdown-menu(aria-labelledby='navbarDropdown')
-            li
-              a.dropdown-item(href='#') Register Here
-        li.nav-item
-          a.nav-link(href='/landing') LOGOUT
-.container
-  form(name='registration' onblur='firstFocus()')
-    .brand-title LOGIN
-    .inputs
-      label EMAIL
-      input(type='email' placeholder='example@test.com')
-      label PASSWORD
-      input(type='password' name='password' placeholder='Min 4 charaters' onblur='valPass() ')
-      button(type='submit') LOGIN
-span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
-script(src='/assets/bootstrap/js/bootstrap.bundle.js')
-script(src='/javascript/register.js')
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title KGL STAFF LOGIN
+    link(href='/assets/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='/assets/css/login.css')
+  body
+    // navbar
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container-fluid
+        img(src='/img/logokgl.jpeg', alt='')
+        a.navbar-brand(href='#') KGL
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            //- li.nav-item.dropdown
+            //-   a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+            //-     | SALES
+            //-   ul.dropdown-menu(aria-labelledby='navbarDropdown')
+            //-     li
+            //-       a.dropdown-item(href='/sales') Sales Input
+            //-     li
+            //-       a.dropdown-item(href='#') Sales Records
+            //- li.nav-item.dropdown
+            //-   a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+            //-     | PROCUREMENT
+            //-   ul.dropdown-menu(aria-labelledby='navbarDropdown')
+            //-     li
+            //-       a.dropdown-item(href='/purchases') Procurement Input
+            //-     li
+            //-       a.dropdown-item(href='#') Procurement Records
+            //- li.nav-item.dropdown
+            //-   a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+            //-     | CREDIT SALES
+            //-   ul.dropdown-menu(aria-labelledby='navbarDropdown')
+            //-     li
+            //-       a.dropdown-item(href='/credit') Credit Sales Input
+            //-     li
+            //-       a.dropdown-item(href='#') Credit Sales Records
+            li.nav-item.dropdown
+              a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                | REGISTER
+              ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                li
+                  a.dropdown-item(href='/register') Register Here
+            li.nav-item
+              a.nav-link(href='/landing') LOGOUT
+    .container
+      form(name='registration', onblur='firstFocus()')
+        .brand-title LOGIN
+        .inputs
+          label EMAIL
+          input(type='email', placeholder='example@test.com')
+          label PASSWORD
+          input(type='password', name='password', placeholder='Min 4 charaters', onblur='valPass() ')
+          button(type='submit') LOGIN
+    span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
+    script(src='/assets/bootstrap/js/bootstrap.bundle.js')
+    script(src='/javascript/register.js')
