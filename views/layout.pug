@@ -4,9 +4,10 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Credit Sales Portal
-    link(rel='stylesheet', href='/assets/css/trial.css')
-  body(onload='firstFocus()')
+    title Sale Report
+    link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/assets/css/trial.css')
+  body
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
       .container-fluid
         img(src='/img/logokgl.jpeg', alt='')
@@ -22,7 +23,7 @@ html(lang='en')
                 li
                   a.dropdown-item(href='/sales') Sales Input
                 li
-                  a.dropdown-item(href='#') Sales Records
+                  a.dropdown-item(href='/sales/report') Sales Records
             li.nav-item.dropdown
               a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
                 | PROCUREMENT
@@ -44,9 +45,9 @@ html(lang='en')
                 | REGISTER
               ul.dropdown-menu(aria-labelledby='navbarDropdown')
                 li
-                  a.dropdown-item(href='/register') Register Here
+                  a.dropdown-item(href='#') Register Here
                 li
-                  a.dropdown-item(href='/report/register') Register Records    
-            li.nav-item
-              a.nav-link(href='/landing') LOGOUT
+                  a.dropdown-item(href='/report/register') Register Records  
+                li.nav-item
+                  a.nav-link(href='/landing') LOGOUT
     block content   

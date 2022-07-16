@@ -24,31 +24,31 @@ router.post('/register', async(req, res) => {
 
 })
 // router for register reports
-router.get('/report/register', async(req, res) => {
-    try{
-        let register = await Signup.find()
-        if (req.query.signup) {
-            register = await Signup.find({ signup: req.query.firstname});
-        }
-        res.render('registerReport', { signups:register})
-
-    }catch(err){
-        res.status(400).send("Unable to find items in the database");
-    }
-});
-
-
-// router.get('/report/register',async (req, res) => {
+// router.get('/report/register', async(req, res) => {
 //     try{
-//         let sale = await Signup.find();
-//         res.render('registerReport')
+//         let register = await Signup.find()
+//         if (req.query.signup) {
+//             register = await Signup.find({ signup: req.query.firstname});
+//         }
+//         res.render('registerReport', { signups:register})
 
-//     }
-//     catch(err){
-//         console.log(err)
-//         res.send('failed to retrive staff details')
+//     }catch(err){
+//         res.status(400).send("Unable to find items in the database");
 //     }
 // });
+
+
+router.get('/report/register',async (req, res) => {
+    try{
+        let register = await Signup.find();
+        res.render('registerReport',{signups:register})
+
+    }
+    catch(err){
+        console.log(err)
+        res.send('failed to retrive staff details')
+    }
+});
 
 
 

@@ -1,56 +1,5 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Sale Report
-    link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.min.css')
-    link(rel='stylesheet' href='/assets/css/trial.css')
-  body
-    nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      .container-fluid
-        img(src='/img/logokgl.jpeg', alt='')
-        a.navbar-brand(href='#') KGL
-        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarSupportedContent.collapse.navbar-collapse
-          ul.navbar-nav.me-auto.mb-2.mb-lg-0
-            li.nav-item.dropdown
-              a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
-                | SALES
-              ul.dropdown-menu(aria-labelledby='navbarDropdown')
-                li
-                  a.dropdown-item(href='/sales') Sales Input
-                li
-                  a.dropdown-item(href='/sales/report') Sales Records
-            li.nav-item.dropdown
-              a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
-                | PROCUREMENT
-              ul.dropdown-menu(aria-labelledby='navbarDropdown')
-                li
-                  a.dropdown-item(href='/purchases') Procurement Input
-                li
-                  a.dropdown-item(href='#') Procurement Records
-            li.nav-item.dropdown
-              a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
-                | CREDIT SALES
-              ul.dropdown-menu(aria-labelledby='navbarDropdown')
-                li
-                  a.dropdown-item(href='/credit') Credit Sales Input
-                li
-                  a.dropdown-item(href='#') Credit Sales Records
-            li.nav-item.dropdown
-              a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
-                | REGISTER
-              ul.dropdown-menu(aria-labelledby='navbarDropdown')
-                li
-                  a.dropdown-item(href='#') Register Here
-                li
-                  a.dropdown-item(href='/report/register') Register Records  
-  
-            li.nav-item
-              a.nav-link(href='/landing') LOGOUT
+extends layout 
+block content 
     .container-fluid
       h2 Sales Report
       .row
@@ -61,31 +10,31 @@ html(lang='en')
                 th Name of produce(kgs)
                 th Branch
                 th Amount paid(ugx) 
-                th Buyer&apos;s Name:
-                th Sales agent&apos;s name:
-                th Date and Time
+                th Buyer's Name:
+                th Sales agent's name:
+                  //- th Date and Time
                 th Tonnage
                 th Edit 
                 th Delete
-          if sales.length
-            each sale in sales
-              tbody
-                tr
-                  td #{sale.producename}
-                  td #{sale.branch} 
-                  td #{sale.amountpaid} 
-                  td #{sale.buyername} 
-                  td  #{sale.agentsname}
-                  td #{sale.dateandtime} 
-                  td #{sale.tonnage}
-                  td
-                    form.edit(method='post', action='/sales/edit')
-                      input(type='hidden', name='firstname', value='signup.firstname')
-                      button(type='submit') Edit
-                  td
-                    form.delete(method='post', action='/sales/delete')
-                      input(type='hidden', name='firstname', value='signup.firstname')
-                      button(type='submit') Delete
+            tbody    
+            if sales.length
+              each sale in sales
+                  tr
+                    td #{sale.producename}
+                    td #{sale.branch} 
+                    td #{sale.amountpaid} 
+                    td #{sale.buyername} 
+                    td  #{sale.agentsname}
+                      //- td #{sale.dateandtime} 
+                    td #{sale.tonnage}
+                    td
+                      form.edit(method='post', action='/sales/edit')
+                        input(type='hidden', name='firstname', value='signup.firstname')
+                        button(type='submit') Edit
+                    td
+                      form.delete(method='post', action='/sales/delete')
+                        input(type='hidden', name='firstname', value='signup.firstname')
+                        button(type='submit') Delete
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')
     script(src='/javascript/register.js')                  

@@ -40,32 +40,42 @@ router.post('/credit', async(req,res)=>{
     }
 })
 
-
-// router.get('/sales/report',async (req, res) => {
-//     try{
-//         let sale = await Sales.find();
-//         res.render('salesreport')
-
-//     }
-//     catch(err){
-//         console.log(err)
-//         res.send('failed to retrive salaes details')
-//     }
-// });
-
-
-router.get('/sales/report', async(req, res) => {
+router.get('/sales/report',async (req, res) => {
     try{
-        let sale = await Sales.find()
-        if (req.query.sale) {
-            register = await Sales.find({ sale: req.query.producename});
-        }
-        res.render('salesreport', {sales:sale})
+        let sell = await Sales.find();
+        res.render('salesreport',{sales:sell})
 
-    }catch(err){
-        res.status(400).send("Unable to find items in the database");
+    }
+    catch(err){
+        console.log(err)
+        res.send('failed to retrive sales details')
     }
 });
+
+router.get('/credit/report',async (req, res) => {
+    try{
+        let deferred = await Credit.find();
+        res.render('creditreport',{credit:deferred})
+
+    }
+    catch(err){
+        console.log(err)
+        res.send('failed to retrive credit details')
+    }
+});
+
+// router.get('/sales/report', async(req, res) => {
+//     try{
+//         let sale = await Sales.find()
+//         if (req.query.sale) {
+//             register = await Sales.find({ sale: req.query.producename});
+//         }
+//         res.render('salesreport', {sales:sale})
+
+//     }catch(err){
+//         res.status(400).send("Unable to find items in the database");
+//     }
+// });
 
 // router.get('/lists',async (req, res) => {
 //     try{
