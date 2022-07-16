@@ -7,11 +7,11 @@ const Credit = require('../models/Credit')
 const router = express.Router();
 
 router.get('/sales', (req, res) => {
-    res.render('sales')
+    res.render('salesform')
 });
 //credit  routes
 router.get('/credit', (req, res) => {
-    res.render('credit')
+    res.render('creditform')
 });
 
 //requiiring models
@@ -19,11 +19,11 @@ router.post('/sales', async(req,res)=>{
     try{
         const sales = new Sales(req.body);
         await sales.save()
-        res.redirect('/sale')
+        res.redirect('/sales')
         console.log(req.body)
     }
     catch(err){
-        res.status(400).render('sale')
+        res.status(400).render('salesform')
     }
 })
 
@@ -41,15 +41,29 @@ router.post('/credit', async(req,res)=>{
 })
 
 
-router.get('/report/sales',async (req, res) => {
-    try{
-        let sale = await Sales.find();
-        res.render('salesreport')
+// router.get('/sales/report',async (req, res) => {
+//     try{
+//         let sale = await Sales.find();
+//         res.render('salesreport')
 
-    }
-    catch(err){
-        console.log(err)
-        res.send('failed to retrive salaes details')
+//     }
+//     catch(err){
+//         console.log(err)
+//         res.send('failed to retrive salaes details')
+//     }
+// });
+
+
+router.get('/sales/report', async(req, res) => {
+    try{
+        let sale = await Sales.find()
+        if (req.query.sale) {
+            register = await Sales.find({ sale: req.query.producename});
+        }
+        res.render('salesreport', {sales:sale})
+
+    }catch(err){
+        res.status(400).send("Unable to find items in the database");
     }
 });
 

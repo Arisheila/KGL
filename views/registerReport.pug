@@ -24,7 +24,7 @@ body
               li
                 a.dropdown-item(href='/sales') Sales Input
               li
-                a.dropdown-item(href='#') Sales Records
+                a.dropdown-item(href='/sales/report') Sales Records
           li.nav-item.dropdown
             a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
               | PROCUREMENT
@@ -62,8 +62,8 @@ body
               th Branch 
               th Role 
               th Email
-              th Delete 
               th Edit
+              th Delete
           tbody
           if signups.length
               each signup in signups 
@@ -82,13 +82,13 @@ body
                           form.delete(method="post" action='/register/delete')
                               // '/products/delete' are routers to create to delet differently
                               input(type="hidden", placeholder="", name="firstname", value=signup.fristname)
-                              button.button2(type="submit") Delete
+                              button.button2(type="submit") Edit
 
                       td
                           form(action="/register/edit/"+signup._id)
                               // '/products/delete' are routers to create to delet differently
                               input(type="hidden")
-                              button.button2(type="submit") Edit
+                              button.button2(type="submit") Delete 
       
         
 

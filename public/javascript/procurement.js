@@ -123,20 +123,36 @@ const valBran =() => {
     
 };
 
-let valPrice = (pricey,paiderror)=>{
+let valPrice  = ()=>{
+    let Pricey = document.registration.pricetosold;
     let price = /[0-9]/;
-    if(pricey.value.match(price) && pricey.value.length >= 5){
+    if( Pricey.value.length >= 5 && Pricey.value.match(price)){
+        Pricey.style.border ='2px solid white'
     
         return true;
     }else{
-        paiderror.innerHTML = 'Enter valid amount';
-        paiderror.style.color = 'red';
-        paiderror.style.fontSize = '11px';
-        pricey.focus();
+        Pricey.style.border ='2px solid Red'
+        Pricey.focus();
         return false;
         
     }
 }
+
+
+// let valPrice = (pricey,paiderror)=>{
+//     let price = /[0-9]/;
+//     if(pricey.value.match(price) && pricey.value.length >= 5){
+    
+//         return true;
+//     }else{
+//         paiderror.innerHTML = 'Enter valid amount';
+//         paiderror.style.color = 'red';
+//         paiderror.style.fontSize = '11px';
+//         pricey.focus();
+//         return false;
+        
+//     }
+// }
 
 const valTop =() =>{
     let top= document.registration.goods;

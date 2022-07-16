@@ -45,7 +45,9 @@ html(lang='en')
                 | REGISTER
               ul.dropdown-menu(aria-labelledby='navbarDropdown')
                 li
-                  a.dropdown-item(href='#') Register Here
+                  a.dropdown-item(href='/register') Register Here
+                li
+                a.dropdown-item(href='/report/register') Register Records  
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     |  
@@ -82,6 +84,6 @@ html(lang='en')
               label PASSWORD
               input(type='password', name='password', placeholder='Min 4 charaters', onblur='valPass()')
           button(type='submit') Register
-      span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
-      script(src='/assets/bootstrap/js/bootstrap.bundle.js')
-      script(src='/javascript/register.js')
+    span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
+    script(src='/assets/bootstrap/js/bootstrap.bundle.js')
+    script(src='/javascript/register.js')
