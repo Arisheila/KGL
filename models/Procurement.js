@@ -63,4 +63,4 @@ const ProcurementSchema = new mongoose.Schema({
 
 // Export Model
 
-module.exports = mongoose.model("Purchases", ProcurementSchema);
+module.exports = mongoose.model("Purchase", ProcurementSchema);

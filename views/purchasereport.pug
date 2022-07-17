@@ -1,9 +1,10 @@
 extends layout 
 block content
-    body.collections
-        .container 
-         h2.reg Purchases List.
-         table.table.table-washers 
+    .container-fluid
+      h2 Procurement Records
+      .row
+        .col.table-responsive
+          table.table.table-bordered.table-hover.table-secondary(style='margin-top:15px;')
             thead
                 tr
                     th Name of produce(kgs)
@@ -17,26 +18,26 @@ block content
                     th Type of Produce
                     
                 tbody
-                if products.length
-                    each product in products
+                if purchases.length
+                    each purchase in purchases
                         tr
-                            td #{signup.nameofProduce}
+                            td #{purchase.nameofProduce}
                             //name and email have to match exactly with models database file as they are written in small case
-                            td #{signup.branch}
-                            td #{signup.date}
-                            td #{signup.thecost}
-                            td #{signup.nameofthedealer}
-                            td #{signup.pricetosold}
-                            td #{signup.date}
-                            td #{signup.goods}
-
-
-
-                                a.button2(href="/products/edit/"+product._id) Edit 
-                                
+                            td #{purchase.branch}
+                            td #{purchase.date}
+                            td #{purchase.thecost}
+                            td #{purchase.nameofthedealer}
+                            td #{purchase.pricetosold}
+                            td #{purchase.date}
+                            td #{purchase.goods}   
                             td
                                 form.delete(method="post" action='/products/delete')
-                                    input(type="hidden", placeholder="", name="id", value=product._id)
-                                    button.button2(type="submit") Delete
-
-                                   
+                                input(type="hidden", placeholder="", name="id", value=product._id)
+                                button.button2(type="submit") Delete
+                            td
+                                form.delete(method='post', action='/sales/delete')
+                                input(type='hidden', name='firstname', value='signup.firstname')
+                                button(type='submit') Delete
+    span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
+    script(src='/assets/bootstrap/js/bootstrap.bundle.js')
+                            

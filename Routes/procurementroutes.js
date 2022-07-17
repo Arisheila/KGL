@@ -22,6 +22,25 @@ router.post('/purchases', async(req,res)=>{
     }
 })
 
+//making purchase report routes
+router.get('/purchases/report',async (req, res) => {
+    try{
+        let procure = await Procurement.find();
+        res.render('purchasereport',{Purchases:procure})
+
+    }
+    catch(err){
+        console.log(err)
+        res.send('failed to retrive purchases details')
+    }
+});
+
+
+
+
+
+
+
 // router.get('/lists',async (req, res) => {
 //     try{
 //         let products = await Product.find();

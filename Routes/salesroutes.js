@@ -14,7 +14,7 @@ router.get('/credit', (req, res) => {
     res.render('creditform')
 });
 
-//requiiring models
+//requiring models
 router.post('/sales', async(req,res)=>{
     try{
         const sales = new Sales(req.body);
@@ -32,7 +32,7 @@ router.post('/credit', async(req,res)=>{
     try{
         const credit = new Credit(req.body);
         await credit.save()
-        res.redirect('/creditlist')
+        res.redirect('/credit')
         console.log(req.body)
     }
     catch(err){
@@ -40,6 +40,7 @@ router.post('/credit', async(req,res)=>{
     }
 })
 
+// reports rendering 
 router.get('/sales/report',async (req, res) => {
     try{
         let sell = await Sales.find();
@@ -55,7 +56,7 @@ router.get('/sales/report',async (req, res) => {
 router.get('/credit/report',async (req, res) => {
     try{
         let deferred = await Credit.find();
-        res.render('creditreport',{credit:deferred})
+        res.render('creditreport',{credits:deferred})
 
     }
     catch(err){

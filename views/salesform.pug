@@ -41,7 +41,7 @@ html(lang='en')
                 li
                   a.dropdown-item(href='/credit') Credit Sales Input
                 li
-                  a.dropdown-item(href='#') Credit Sales Records
+                  a.dropdown-item(href='/credit/report') Credit Sales Records
             li.nav-item.dropdown
               a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
                 | REGISTER
@@ -51,8 +51,7 @@ html(lang='en')
                 li
                   a.dropdown-item(href='/report/register') Register Records  
             li.nav-item
-              a.nav-link(href='/landing') LOGOUT
-    |  
+              a.nav-link(href='/landing') LOGOUT  
     .container
       form(name='registration', onblur='firstFocus()' action="/sales" method="POST")
         .brand-title Sales Input
@@ -96,7 +95,7 @@ html(lang='en')
             div
               label
               button#mybutton.btnc Submit
-    |  
+     
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')
     script(src='/javascript/sale.js')
