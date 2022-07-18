@@ -5,7 +5,7 @@ const firstFocus =()=>{
 const valProd =() => {
     let produce =document.registration.producename;
     if(
-        produce.value == 'default'
+        produce.value == ''
     ){
         produce.style.border ='2px Solid red'
         return false;
@@ -89,7 +89,7 @@ const valDate = () =>{
 const valBran =() => {
     let branchy = document.registration.branch;
     if(
-        branchy.value == 'default'
+        branchy.value == ''
     ){
         branchy.style.border ='2px Solid red'
         return false;

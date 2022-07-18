@@ -33,7 +33,7 @@ html(lang='en')
                 li
                   a.dropdown-item(href='/purchases') Procurement Input
                 li
-                  a.dropdown-item(href='#') Procurement Records
+                  a.dropdown-item(href='/purchases/report') Procurement Records
             li.nav-item.dropdown
               a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
                 | CREDIT SALES
@@ -53,14 +53,14 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT  
     .container
-      form(name='registration', onblur='firstFocus()' action="/sales" method="POST")
+      form( action="/sales" method="POST" name='registration', onblur='firstFocus()')
         .brand-title Sales Input
         .inputs
           .row
             .tableRow.col
               label Name of produce(kgs):
-              select(name='producename', id='', onblur='valProd()')
-                option(value='default')  Select name of produce
+              select(name='producename' onblur='valProd()')
+                option(value='')  Select name of produce
                 option(value='Beans') Beans
                 option(value='Grain') Grain
                 option(value='Maize') Maize
@@ -70,19 +70,19 @@ html(lang='en')
             .tableRow.col
               label Branch
               select(name='branch', onblur='valBran()')
-                option(value='default') Branch Name
+                option(value='') Branch Name
                 option(value='Ggaba') Ggaba
                 option(value='ntinda') Ntinda
           .row
             .tableRow.col
               label Amount paid(ugx)
-              input(type='alphanumeric', name='amountpaid', onblur='valPaid()')
+              input(type='number', name='amountpaid', onblur='valPaid()')
             .tableRow.col
-              label Buyer&apos;s Name:
+              label Buyer's Name:
               input(type='alphanumeric', name='buyername', onblur='valBuyer()')
           .row
             .tableRow.col
-              label Sales agent&apos;s name:
+              label Sales agent's name:
               input(type='alphanumeric', name='agentsname', onblur='valSale()')
             .tableRow.col
               label Date and Time 
@@ -90,7 +90,7 @@ html(lang='en')
           .row
             .tableRow.col
               label Tonnage (kgs)
-              input(type='alphanumeric', name='tonnage', onblur='valTonnage()')
+              input(type='number', name='tonnage', onblur='valTonnage()')
           .row
             div
               label

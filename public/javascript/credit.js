@@ -113,7 +113,7 @@ const valDate = () =>{
 const valProduce =() => {
     let prod =document.registration.nameofproduce;
     if(
-        prod.value == 'default'
+        prod.value == ''
     ){
         prod.style.border ='2px Solid red'
         return false;
@@ -127,7 +127,7 @@ const valProduce =() => {
 const valBran =() => {
         let branchy = document.registration.branch;
         if(
-            branchy.value == 'default'
+            branchy.value == ''
         ){
             branchy.style.border ='2px Solid red'
             return false;

@@ -6,7 +6,6 @@ const ProcurementSchema = new mongoose.Schema({
   nameofProduce: {
     type: String,
   },
-
   branch:{
     type:String,
   
@@ -35,7 +34,7 @@ const ProcurementSchema = new mongoose.Schema({
   },
 
   contact:{
-    type:Number,
+    type:String,
   },
 
   goods: {

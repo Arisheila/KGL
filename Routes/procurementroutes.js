@@ -14,11 +14,12 @@ router.post('/purchases', async(req,res)=>{
     try{
         const procurement = new Procurement(req.body);
         await procurement.save()
-        res.redirect('/purchases')
+        res.redirect('/purchases/report')
         console.log(req.body)
     }
     catch(err){
         res.status(400).render('procurement')
+        console.log(err)
     }
 });
 
@@ -35,72 +36,60 @@ router.get('/purchases/report',async (req, res) => {
     }
 });
 
-// router.get('/purchases/report',async (req, res) => {
+//router for deleting
+router.post('/purchases/delete', async (req, res) => {
+    try {
+        await Procurement.deleteOne({ _id: req.body.id })
+        res.redirect('back')
+    } catch (err) {
+        res.status(400).send("Unable to delete item in the database");
+    }
+})
+
+// edit routes to get the form 
+
+  
+// router.get('/editproduct/:id', async(req, res) => {
 //     try{
-//         let procure = await Procurement.find();
-//         res.render('purchasereport',{purchases:procure})
-
+//       // 
+//       // get what ever we find in DB and store in variable item
+//       const item = await Product.findOne({id:req.params.id});
+//       // product:item means call this item by var nme product in .pug file
+//       res.render('edit_product',{product:item});
 //     }
-//     catch(err){
-//         console.log(err)
-//         res.send('failed to retrive purchases details')
+//     catch(error){
+//       res.send("Product not found in DB");
 //     }
-// });
-
-
-
-
-
-
-// //getting the edit file -rendering the edit file
-// router.get('/edit/:id', async (req, res)=>{
-//   try {
-//     //line 40 the url will pick the specific id of the product list u want to editand will be displayed in the url
-//     const item = await Product.findOne({_id:req.params.id});
-//     res.render('edit_product',{product:item})
-//   }
-//   catch (error){
-//     res.send('unable to find the message')
-//   } 
-//   });
-// // update submit new product 
-// router.post('/edit/:id', async(req, res)=>{
-//     let product = {};
-//     product.name = req.body.name;
-//     product.price = req.body.price;
-    
+//    });
+//   // post updates
   
-//     let query = {_id: req.params.id};
+//    router.post('/editproduct', async(req, res) => {
+//     try{
+     
+//       await Product.findOneAndUpdate({_id:req.query.id},req.body);
+     
+//       res.redirect('/purchases/report');
+//     }
+//     catch(error){
+//       res.send("Failed to update purchase report");
+//     }
+//    });
   
-//     Product.update(query, product, (err)=>{
-//       if(err) {
-//         console.error(err);
-//         return;
-//       } else {
-//         req.flash('success', 'Product Updated');
-//         res.redirect('/');
-//       }
-//     })
-//   });
-// //   router.get('/editproduct', (req, res) => {
-// //     res.render('edit_product', {title: 'Farm Manager Register'})
-// // });
 
+//edit for updating
 
-// // post updates
-// router.post('/editproduct/:id', async(req,res)=>{
-//   try{
-//     //get what ever we find in DB and store in variable item
-//     await Product.findOneAndUpdate({_id:req.query.id},req.body);
-//     //myproduct is the name we use to refer to item in the .pug file
-//     res.redirect('/products/lists');
-//   }
-//   catch(error){
-//     res.send('Failed to update product')
-
-//   }
-// });
-
+// router.post('/editproduct', async(req, res) => {
+//     try{
+     
+//       await Product.findOneAndUpdate({_id:req.query.id},req.body);
+     
+//       res.redirect('/products/lists');
+//     }
+//     catch(error){
+//       res.send("Failed to update product");
+//     }
+//    });
+  
 
 
 

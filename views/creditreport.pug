@@ -39,11 +39,11 @@ block content
                       td #{credit.branch}
                       td #{credit.tonnage}     
                       td
-                        form.edit(method='post', action='/sales/edit')
+                        form.edit(method='post', action='/credit/edit')
                           input(type='hidden', name='firstname', value='signup.firstname')
                           button(type='submit') Edit
                       td
-                        form.delete(method='post', action='/sales/delete')
+                        form.delete(method='post', action='/credit/delete')
                           input(type='hidden', name='firstname', value='signup.firstname')
                           button(type='submit') Delete
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila

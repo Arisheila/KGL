@@ -17,40 +17,44 @@ const creditSchema = new mongoose.Schema({
     type:Number,
   
   },
-  salesagent:{
-    type:String,
-  
-  },
   amountdue:{
     type:Number,
 
   },
 
-  dispatch:{
+  salesagent:{
     type:String,
   
   },
-  
-  date:{
-    type:Date,
+  tonnage:{
+    type:Number,
   
   },
-  goods:{
-    type:String,
-  },
-
   nameofproduce:{
     type:String,
   
   },
+
+  goods:{
+    type:String,
+  },
+  date:{
+    type:Date,
+  
+  },
+
+  dispatch:{
+    type:Date,
+  
+  },
+  
+
+  
   branch:{
     type:String,
 
   },
-  tonnage:{
-    type:String,
   
-  },
   
 });
 

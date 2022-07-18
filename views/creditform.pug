@@ -32,7 +32,7 @@ html(lang='en')
                 li
                   a.dropdown-item(href='/purchases') Procurement Input
                 li
-                  a.dropdown-item(href='#') Procurement Records
+                  a.dropdown-item(href='/purchases/report') Procurement Records
             li.nav-item.dropdown
               a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
                 | CREDIT SALES
@@ -52,7 +52,7 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form(name='registration' onblur='firstFocus()' action="/credit" method="POST")
+      form(action="/credit" method="POST" name='registration' onblur='firstFocus()')
         .brand-title Credit Sales Input
         .inputs
           .row
@@ -61,29 +61,29 @@ html(lang='en')
               input(type='alphanumeric', name='buyername', onblur='valBuyer()')
             .tableRow.col
               label National ID:
-              input(type='alphabets', name='nationalid', onblur='valNin()')
+              input(type='alphanumeric', name='nationalid', onblur='valNin()')
           .row
             .tableRow.col
               label Location
-              input(type='alphanumeric', name='location', onblur='valLoc()')
+              input(type='text', name='location', onblur='valLoc()')
             .tableRow.col
               label Contacts
-              input(type='numeric', name='contact', placeholder='0783023810', onblur='valCon()')
+              input(type='number', name='contact', placeholder='0783023810', onblur='valCon()')
           .row
             .tableRow.col
               label Amount due
-              input(type='alphanumeric', name='amountdue', onblur='valDue()')
+              input(type='number', name='amountdue', onblur='valDue()')
             .tableRow.col
               label Sales Agent
-              input(type='alphanumeric', name='salesagent', onblur='valAgent()')
+              input(type='text', name='salesagent', onblur='valAgent()')
           .row
             .tableRow.col
-              label Tonnage
-              input(type='numeric', name='tonnage', onblur='valTonnage()')
+              label Tonnage(kgs)
+              input(type='number', name='tonnage', onblur='valTonnage()')
             .tableRow.col
               label Produce name
               select(name="nameofproduce" onblur="valProduce()")
-                option(value='default') Name of goods
+                option(value='') Name of goods
                 option(value='Beans') Beans
                 option(value='Grain') Grain
                 option(value='Maize') Maize
@@ -92,7 +92,7 @@ html(lang='en')
                 option(value='Soya Beans') Soya Beans
             .tableRow.col
                 label Type of produce:
-                input(type='alphabets', name='goods', onblur='valTop()')       
+                input(type='text', name='goods', onblur='valTop()')       
           .row
             .tableRow.col
               label Due Date:
@@ -103,7 +103,7 @@ html(lang='en')
             .tableRow.col
               label Branch
               select(name='branch' onblur="valBran()")
-                option(value='default') Branch Name
+                option(value='') Branch Name
                 option(value='Ggaba') Ggaba
                 option(value='Ntinda') Ntinda 
           div

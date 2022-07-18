@@ -31,7 +31,7 @@ const valSec =()=>{
 const valBran = () =>{
     let branchee = document.registration.branch;
     if(
-        branchee.value == 'default'
+        branchee.value == ''
     ){
         branchee.style.border ='2px Solid red'
         return false;
@@ -46,7 +46,7 @@ const valBran = () =>{
 const valRole = () =>{
     let role = document.registration.role;
     if(
-        role.value == 'default'
+        role.value == ''
     ){
         role.style.border ='2px Solid red'
         return false;

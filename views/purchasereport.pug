@@ -9,7 +9,6 @@ block content
               tr
                 th Name of produce(kgs)
                 th Branch
-                th Date/Time of produce 
                 th Tonnage(kgs)
                 th Cost(ugx)
                 th Name of the dealer
@@ -32,11 +31,11 @@ block content
                     td #{purchase.goods}
                     
                     td
-                      form.edit(method='post', action='/sales/edit')
+                      form.edit(method='POST', action='/purchases/edit')
                         input(type='hidden', name='firstname', value='signup.firstname')
                         button(type='submit') Edit
                     td
-                      form.delete(method='post', action='/sales/delete')
+                      form.delete(method='POST', action='/purchases/delete')
                         input(type='hidden', name='firstname', value='signup.firstname')
                         button(type='submit') Delete
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila

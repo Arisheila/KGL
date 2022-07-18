@@ -19,7 +19,7 @@ router.post('/sales', async(req,res)=>{
     try{
         const sales = new Sales(req.body);
         await sales.save()
-        res.redirect('/sales')
+        res.redirect('/sales/report')
         console.log(req.body)
     }
     catch(err){
@@ -32,7 +32,7 @@ router.post('/credit', async(req,res)=>{
     try{
         const credit = new Credit(req.body);
         await credit.save()
-        res.redirect('/credit')
+        res.redirect('/credit/report')
         console.log(req.body)
     }
     catch(err){

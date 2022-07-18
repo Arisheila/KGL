@@ -11,12 +11,16 @@ const salesSchema = new mongoose.Schema({
   },
 
   amountpaid:{
-    type:String,
+    type:Number,
   },
 
   buyername:{
     type: String,
   
+  },
+  agentsname:{
+    type: String,
+
   },
   dateandtime:{
     type:Date,
@@ -24,17 +28,9 @@ const salesSchema = new mongoose.Schema({
   },
 
   tonnage: {
-    type:String,
+    type:Number,
   },
-
   
-
-  agentsname:{
-    type: String,
-
-  },
-
-
 
 
 });

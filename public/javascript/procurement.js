@@ -6,7 +6,7 @@ const firstFocus = () => {
 const valProduce = () => {
 let nopp = document.registration.nameofProduce;
 if(
-    nopp.value == 'default'
+    nopp.value == ''
 ){
     nopp.style.border='2px Solid red'
     return false;
@@ -52,7 +52,7 @@ const valTon = ()=>{
     let tonn = document.registration.tonnage;
     let ton = /[0-9]/; 
     if(
-        tonn.value.length <=3 || !tonn.value.match(ton)
+        tonn.value.length <3 || !tonn.value.match(ton)
     ){
         tonn.style.border ='2px solid red'
         return false;
@@ -111,7 +111,7 @@ const valContact =() =>{
 const valBran =() => {
     let branchy = document.registration.branch;
     if(
-        branchy.value == 'default'
+        branchy.value == ''
     ){
         branchy.style.border ='2px Solid red'
         return false;
@@ -163,6 +163,7 @@ const valTop =() =>{
     }
     else{
         top.style.border ='2px solid white';
+        top.focus();
         return true;
     }
    
