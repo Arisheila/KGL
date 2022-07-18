@@ -33,7 +33,7 @@ html(lang='en')
                 li
                   a.dropdown-item(href='/purchases') Procurement Input
                 li
-                  a.dropdown-item(href='#') Procurement Records
+                  a.dropdown-item(href='/purchases/report') Procurement Records
             li.nav-item.dropdown
               a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
                 | CREDIT SALES
@@ -41,7 +41,7 @@ html(lang='en')
                 li
                   a.dropdown-item(href='/credit') Credit Sales Input
                 li
-                  a.dropdown-item(href='#') Credit Sales Records
+                  a.dropdown-item(href='/credit/report') Credit Sales Records
             li.nav-item.dropdown
               a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
                 | REGISTER
@@ -53,7 +53,7 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form(name='registration', onblur='firstFocus()' action="/purchases" method="POST")
+      form(name='registration' onblur='firstFocus()' action="/purchases" method="POST")
         .brand-title PROCUREMENT INPUT
         .inputs
           .row
@@ -67,42 +67,41 @@ html(lang='en')
                 option(value='cpeas') Cowpeas
                 option(value='G_nuts') G-nuts
                 option(value='Soya Beans') Soya Beans
-            
             .tableRow.col
               label Branch
               select(name='branch')
                 option(value='default') Branch Name
                 option(value='Ggaba') Ggaba
                 option(value='ntinda') Ntinda
-            .row
-              .tableRow.col
-                label Date/Time of produce:
-                input(type='datetime-local', name='date', onblur='valdate()')
-              .tableRow.col
-                label Tonnage (kgs)
-                input(type='numeric', name='tonnage', onblur='valTon()')
-            .row
-              .tableRow.col
-                label Cost(ugx):
-                input(type='numeric', name='thecost', onblur='valCost()')
-              .tableRow.col
-                label Name of the dealer:
-                input(type='alpha-numeric', name='nameofthedealer', onblur='valDealer()')
-            .row
-              .tableRow.col
-                label Price to be sold :
-                input(type='numeric', name='pricetosold', onblur='valPrice()')
-                span#paiderror
-              .tableRow.col
-                label Contact:
-                input(type='numeric', name='contact', placeholder='0705522174', onblur='valContact()')
-              .tableRow.col
-                label Type of produce:
-                input(type='alphabets', name='goods', onblur='valTop()')  
-            .row
-              .tableRow
-                label
-                button(type='submit') Submit
+          .row
+            .tableRow.col
+              label Date/Time of produce:
+              input(type='datetime-local', name='date', onblur='valdate()')
+            .tableRow.col
+              label Tonnage (kgs)
+              input(type='numeric', name='tonnage', onblur='valTon()')
+          .row
+            .tableRow.col
+              label Cost(ugx):
+              input(type='numeric', name='thecost', onblur='valCost()')
+            .tableRow.col
+              label Name of the dealer:
+              input(type='alpha-numeric', name='nameofthedealer', onblur='valDealer()')
+          .row
+            .tableRow.col
+              label Price to be sold :
+              input(type='numeric', name='pricetosold', onblur='valPrice()')
+              span#paiderror
+            .tableRow.col
+              label Contact:
+              input(type='numeric', name='contact', placeholder='0705522174', onblur='valContact()')
+            .tableRow.col
+              label Type of produce:
+              input(type='alphabets', name='goods', onblur='valTop()')  
+          .row
+            .tableRow
+              label
+              button(type='submit') Submit
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')
     script(src='/javascript/procurement.js')

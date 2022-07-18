@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const Procurement = require('../models/Procurement');
 
-// const procurement =require('../models/Procurement')
+
 const router = express.Router();
 
 router.get('/purchases', (req, res) => {
@@ -18,15 +18,15 @@ router.post('/purchases', async(req,res)=>{
         console.log(req.body)
     }
     catch(err){
-        // res.status(400).render('procurement')
+        res.status(400).render('procurement')
     }
-})
+});
 
 //making purchase report routes
 router.get('/purchases/report',async (req, res) => {
     try{
         let procure = await Procurement.find();
-        res.render('purchasereport',{Purchases:procure})
+        res.render('purchasereport',{purchases:procure})
 
     }
     catch(err){
@@ -35,23 +35,22 @@ router.get('/purchases/report',async (req, res) => {
     }
 });
 
-
-
-
-
-
-
-// router.get('/lists',async (req, res) => {
+// router.get('/purchases/report',async (req, res) => {
 //     try{
-//         let products = await Product.find();
-//         res.render('productlist',{products:products, title:'Product details'})
+//         let procure = await Procurement.find();
+//         res.render('purchasereport',{purchases:procure})
 
 //     }
 //     catch(err){
 //         console.log(err)
-//         res.send('failed to retrive manager details')
+//         res.send('failed to retrive purchases details')
 //     }
 // });
+
+
+
+
+
 
 // //getting the edit file -rendering the edit file
 // router.get('/edit/:id', async (req, res)=>{

@@ -19,22 +19,6 @@ const registerRoutes = require("./routes/registerRoutes")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Database
 const config = require('./config/database');
 const Signup = require('./models/Signup');

@@ -90,19 +90,22 @@ html(lang='en')
                 option(value='cowpeas') Cowpeas
                 option(value='G_nuts') G-nuts
                 option(value='Soya Beans') Soya Beans
+            .tableRow.col
+                label Type of produce:
+                input(type='alphabets', name='goods', onblur='valTop()')       
           .row
             .tableRow.col
               label Due Date:
               input(type='datetime-local', name='date', onblur='valDate()')
             .tableRow.col
               label Date of dispatch
-              input(type='datetime-local', name='dispatch', onblur='valDispatch()')
+              input(type='datetime-local', name='dispatch', onblur='valDispatch()')    
             .tableRow.col
               label Branch
               select(name='branch' onblur="valBran()")
                 option(value='default') Branch Name
                 option(value='Ggaba') Ggaba
-                option(value='Ntinda') Ntinda
+                option(value='Ntinda') Ntinda 
           div
             label
             button#mybutton.btnc Submit

@@ -36,7 +36,7 @@ router.post('/credit', async(req,res)=>{
         console.log(req.body)
     }
     catch(err){
-        res.status(400).render('credit')
+        res.status(400).render('creditform')
     }
 })
 
