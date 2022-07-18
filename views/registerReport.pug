@@ -35,10 +35,10 @@ block content
                                     button.button2(type="submit") Edit
 
                             td
-                                form(action="/register/edit/"+signup._id)
+                                form.delete(method='post', action='/register/delete')
                                     // '/products/delete' are routers to create to delet differently
-                                    input(type="hidden")
-                                    button.button2(type="submit") Delete 
+                                    input(type='hidden', name="id", value=signup ._id)
+                                    button(type='submit') Delete
 
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')

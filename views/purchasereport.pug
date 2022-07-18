@@ -31,12 +31,12 @@ block content
                     td #{purchase.goods}
                     
                     td
-                      form.edit(method='POST', action='/purchases/edit')
-                        input(type='hidden', name='firstname', value='signup.firstname')
+                      form( action='/purchases/edit'+purchase._id)
+                        input(type='hidden')
                         button(type='submit') Edit
                     td
-                      form.delete(method='POST', action='/purchases/delete')
-                        input(type='hidden', name='firstname', value='signup.firstname')
+                      form.delete(method='post', action='/purchases/delete')
+                        input(type='hidden', name="id", value = purchase._id)
                         button(type='submit') Delete
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')

@@ -32,7 +32,6 @@ const salesSchema = new mongoose.Schema({
   },
   
 
-
 });
 
 // Export Model

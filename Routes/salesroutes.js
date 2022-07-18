@@ -65,6 +65,34 @@ router.get('/credit/report',async (req, res) => {
     }
 });
 
+// delete routes
+//credit
+router.post('/credit/delete', async (req, res) => {
+    try {
+        await Credit.deleteOne({ _id: req.body.id })
+        res.redirect('back')
+    } catch (err) {
+        res.status(400).send("Unable to delete item in the database");
+    }
+});
+//sales
+router.post('/sales/delete', async (req, res) => {
+    try {
+        await Sales.deleteOne({ _id: req.body.id })
+        res.redirect('back')
+    } catch (err) {
+        res.status(400).send("Unable to delete item in the database");
+    }
+});
+
+
+
+
+
+
+
+
+
 // router.get('/sales/report', async(req, res) => {
 //     try{
 //         let sale = await Sales.find()

@@ -49,18 +49,19 @@ router.post('/purchases/delete', async (req, res) => {
 // edit routes to get the form 
 
   
-// router.get('/editproduct/:id', async(req, res) => {
+// router.get('/purchases/edit/:id', async(req, res) => {
 //     try{
-//       // 
-//       // get what ever we find in DB and store in variable item
-//       const item = await Product.findOne({id:req.params.id});
+      
+//       // get what ever we find in DB and store in variable item(model file)
+//       const Purchasee = await Procurement.findOne({_id:req.params.id});
 //       // product:item means call this item by var nme product in .pug file
-//       res.render('edit_product',{product:item});
+//       res.render('editpurchase',{procure:Purchasee});
 //     }
 //     catch(error){
-//       res.send("Product not found in DB");
+//       res.send("Purchases not found in DB");
 //     }
 //    });
+
 //   // post updates
   
 //    router.post('/editproduct', async(req, res) => {

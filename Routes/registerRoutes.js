@@ -18,7 +18,7 @@ router.post('/register', async(req, res) => {
             res.status(400).render('/report/register')
             console.log(err)
         } else {
-            res.redirect('/login')
+            res.redirect('/report/register')
         }
     })
 
@@ -36,6 +36,16 @@ router.get('/report/register',async (req, res) => {
     catch(err){
         console.log(err)
         res.send('failed to retrive staff details')
+    }
+});
+
+//delete routes
+router.post('/register/delete', async (req, res) => {
+    try {
+        await Signup.deleteOne({ _id: req.body.id })
+        res.redirect('back')
+    } catch (err) {
+        res.status(400).send("Unable to delete item in the database");
     }
 });
 

@@ -33,7 +33,7 @@ block content
                         button(type='submit') Edit
                     td
                       form.delete(method='post', action='/sales/delete')
-                        input(type='hidden', name='firstname', value='signup.firstname')
+                        input(type='hidden', name="id", value=sale._id)
                         button(type='submit') Delete
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')
