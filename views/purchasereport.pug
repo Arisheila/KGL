@@ -2,7 +2,10 @@ extends layout
 block content 
     .container-fluid
       h2 Procurement Records
-      p TOTAL TONNAGE SOLD OUT
+      p TOTAL PROCUREMENT COST
+      p #{total.totalCost} UGX
+      P TONNAGE 
+      P #{total.totalTonnage} kgs
       
       .row
         .col.table-responsive
@@ -28,10 +31,9 @@ block content
                     td #{purchase.tonnage}
                     td #{purchase.thecost} 
                     td #{purchase.nameofthedealer} 
-                    td  #{purchase.pricetosold}
+                    td #{purchase.pricetosold}
                     td #{purchase.contact} 
                     td #{purchase.goods}
-                    
                     td
                       a.btn.btn-dark.btn-block(href='/purchases/editpurchases/'+purchase.id) Edit
                     td

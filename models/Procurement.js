@@ -34,27 +34,13 @@ const ProcurementSchema = new mongoose.Schema({
   },
 
   contact:{
-    type:String,
+    type:Number,
   },
 
   goods: {
     type:String,
   },
-
-  
- 
-
-  cost:{
-    type:Number,
-
-  },
-
-  nameofthedealer:{
-    type:String,
-  
-  },
-  
-  
+   
 
 
 

@@ -29,13 +29,14 @@ router.get('/purchases/report',async (req, res) => {
         let procure = await Procurement.find();
         let totalProcure = await Procurement.aggregate([
             {'$group':{_id:'$all',
-            totalAmountdue:{$sum:'$amountdue'},
+            totalCost:{$sum:'$thecost'},
             totalTonnage:{$sum:'$tonnage'}
         }}
 
         ])
-        res.render('purchasereport',{purchases:procure})
-
+        
+        res.render('purchasereport',{
+            purchases:procure, total:totalProcure[0]})
     }
     catch(err){
         console.log(err)
