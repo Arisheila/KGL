@@ -6,7 +6,6 @@ block content
       p #{total.totalCost} UGX
       P TONNAGE 
       P #{total.totalTonnage} kgs
-      
       .row
         .col.table-responsive
           table.table.table-bordered.table-hover.table-secondary(style='margin-top:15px;')
@@ -35,7 +34,7 @@ block content
                     td #{purchase.contact} 
                     td #{purchase.goods}
                     td
-                      a.btn.btn-dark.btn-block(href='/purchases/editpurchases/'+purchase.id) Edit
+                      a.btn.btn-dark.btn-block(href='/purchases/edit/'+purchase._id) Edit
                     td
                       form.delete(method='post', action='/purchases/delete')
                         input(type='hidden', name="id", value = purchase._id)

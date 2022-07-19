@@ -54,50 +54,34 @@ router.post('/purchases/delete', async (req, res) => {
     }
 })
 
-// edit routes to get the form 
+// edit routes to get the form
+// get the update form
+router.get('/purchases/edit/:id', async(req, res) => {
+try{
+ 
+  const procure = await Procurement.findOne({id:req.params.id});
 
-  
-// router.get('/purchases/edit/:id', async(req, res) => {
-//     try{
-      
-//       // get what ever we find in DB and store in variable item(model file)
-//       const Purchasee = await Procurement.findOne({_id:req.params.id});
-//       // product:item means call this item by var nme product in .pug file
-//       res.render('editpurchase',{procure:Purchasee});
-//     }
-//     catch(error){
-//       res.send("Purchases not found in DB");
-//     }
-//    });
+  // user is what the pug file uses for identifying id
+  res.render('editpurchase', {purchases:procure});
+}
+catch(error){
+  res.send("Purchases not found in DB");
+}
+});
 
-//   // post updates
-  
-//    router.post('/editproduct', async(req, res) => {
-//     try{
-     
-//       await Product.findOneAndUpdate({_id:req.query.id},req.body);
-     
-//       res.redirect('/purchases/report');
-//     }
-//     catch(error){
-//       res.send("Failed to update purchase report");
-//     }
-//    });
-  
-
-//edit for updating
-
-// router.post('/editproduct', async(req, res) => {
-//     try{
-     
-//       await Product.findOneAndUpdate({_id:req.query.id},req.body);
-     
-//       res.redirect('/products/lists');
-//     }
-//     catch(error){
-//       res.send("Failed to update product");
-//     }
-//    });
+//  update sales infotmation
+router.post('/edit/', async(req, res) => {
+  try{
+    
+    await Procurement.findOneAndUpdate({_id:req.query.id},req.body);
+    
+    res.redirect('/purchases/report');
+  }
+  catch(error){
+    res.send("Failed to update procurement report");
+    console.log(error);
+  }
+ });
   
 
 
