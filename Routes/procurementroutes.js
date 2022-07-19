@@ -27,6 +27,13 @@ router.post('/purchases', async(req,res)=>{
 router.get('/purchases/report',async (req, res) => {
     try{
         let procure = await Procurement.find();
+        let totalProcure = await Procurement.aggregate([
+            {'$group':{_id:'$all',
+            totalAmountdue:{$sum:'$amountdue'},
+            totalTonnage:{$sum:'$tonnage'}
+        }}
+
+        ])
         res.render('purchasereport',{purchases:procure})
 
     }

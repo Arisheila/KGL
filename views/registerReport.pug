@@ -29,10 +29,9 @@ block content
                                 //-  a.button2(href="/products/edit/"+signup.firstname) Edit 
                                 
                             td
-                                form.delete(method="post" action='/register/delete')
+                                a.btn.btn-dark.btn-block(href='/register/editregister/'+signup.id) Edit
                                     // '/products/delete' are routers to create to delet differently
-                                    input(type="hidden", placeholder="", name="firstname", value=signup.fristname)
-                                    button.button2(type="submit") Edit
+                                    
 
                             td
                                 form.delete(method='post', action='/register/delete')

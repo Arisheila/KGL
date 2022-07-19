@@ -1,7 +1,11 @@
 extends layout 
-block content 
+block content
     .container-fluid
       h2 Credit Records
+      p TOTAL AMOUNT DUE 
+      p #{total.totalAmountdue} ugx 
+      p TOTAL TONNAGE SOLD OUT 
+      p #{total.totalTonnage} kgs
       .row
         .col.table-responsive
           table.table.table-bordered.table-hover.table-secondary(style='margin-top:15px;')
@@ -39,9 +43,7 @@ block content
                       td #{credit.branch}
                       td #{credit.tonnage}     
                       td
-                        form.edit(method='post', action='/credit/edit')
-                          input(type='hidden', name='firstname', value='signup.firstname')
-                          button(type='submit') Edit
+                        a.btn.btn-dark.btn-block(href='/credit/editcredit/'+credit.id) Edit
                       td
                         form.delete(method='post', action='/credit/delete')
                           input(type='hidden', name="id", value=credit._id)

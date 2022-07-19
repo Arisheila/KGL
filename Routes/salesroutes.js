@@ -44,7 +44,17 @@ router.post('/credit', async(req,res)=>{
 router.get('/sales/report',async (req, res) => {
     try{
         let sell = await Sales.find();
-        res.render('salesreport',{sales:sell})
+        let totalSales = await Sales.aggregate([
+            {'$group':{_id:'$all',
+            totalRevenue:{$sum:'$amountpaid'},
+            totalTonnage:{$sum:'$tonnage'}
+
+            }}
+        ])
+        res.render('salesreport',{
+            sales:sell,
+            total:totalSales[0] 
+        })
 
     }
     catch(err){
@@ -56,7 +66,15 @@ router.get('/sales/report',async (req, res) => {
 router.get('/credit/report',async (req, res) => {
     try{
         let deferred = await Credit.find();
-        res.render('creditreport',{credits:deferred})
+        let totalCredit = await Credit.aggregate([
+            {'$group':{_id:'$all',
+            totalAmountdue:{$sum:'$amountdue'},
+            totalTonnage:{$sum:'$tonnage'}
+
+            }}
+        ])
+        res.render('creditreport',{
+            credits:deferred, total:totalCredit[0]})
 
     }
     catch(err){
@@ -85,6 +103,16 @@ router.post('/sales/delete', async (req, res) => {
     }
 });
 
+//edit editing the salesReport
+router.get('/editsale?id=', async(req, res) => {
+    try{
+      const sell = await Sales.findOne({id:req.params.id});
+      res.render('editSale',{sale:sell});
+    }
+    catch(error){
+      res.send("Sale not found in DB");
+    }
+   });
 
 
 

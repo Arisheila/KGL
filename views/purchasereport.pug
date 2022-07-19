@@ -2,6 +2,8 @@ extends layout
 block content 
     .container-fluid
       h2 Procurement Records
+      p TOTAL TONNAGE SOLD OUT
+      
       .row
         .col.table-responsive
           table.table.table-bordered.table-hover.table-secondary(style='margin-top:15px;')
@@ -31,9 +33,7 @@ block content
                     td #{purchase.goods}
                     
                     td
-                      form( action='/purchases/edit'+purchase._id)
-                        input(type='hidden')
-                        button(type='submit') Edit
+                      a.btn.btn-dark.btn-block(href='/purchases/editpurchases/'+purchase.id) Edit
                     td
                       form.delete(method='post', action='/purchases/delete')
                         input(type='hidden', name="id", value = purchase._id)

@@ -53,13 +53,13 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT  
     .container
-      form( action="/sales" method="POST" name='registration', onblur='firstFocus()')
+      form( action="/editsale" method="POST" name='registration', onblur='firstFocus()')
         .brand-title Sales Input
         .inputs
           .row
             .tableRow.col
               label Name of produce(kgs):
-              select(name='producename' onblur='valProd()')
+              select(name='producename' value=sell.producename onblur='valProd()')
                 option(value='')  Select name of produce
                 option(value='Beans') Beans
                 option(value='Grain') Grain
@@ -69,28 +69,28 @@ html(lang='en')
                 option(value='Soya Beans') Soya Beans
             .tableRow.col
               label Branch
-              select(name='branch', onblur='valBran()')
+              select(name='branch' value = sell.branch onblur='valBran()')
                 option(value='') Branch Name
                 option(value='Ggaba') Ggaba
                 option(value='ntinda') Ntinda
           .row
             .tableRow.col
               label Amount paid(ugx)
-              input(type='number', name='amountpaid', onblur='valPaid()')
+              input(type='number', name='amountpaid', value = sell.amountpaid onblur='valPaid()')
             .tableRow.col
               label Buyer's Name:
-              input(type='alphanumeric', name='buyername', onblur='valBuyer()')
+              input(type='alphanumeric', name='buyername',value =sell.buyername  onblur='valBuyer()')
           .row
             .tableRow.col
               label Sales agent's name:
-              input(type='alphanumeric', name='agentsname', onblur='valSale()')
+              input(type='alphanumeric', name='agentsname',value=sell.agentsname onblur='valSale()')
             .tableRow.col
               label Date and Time 
-              input(type='datetime-local', name='dateandtime', onblur='valDate()')
+              input(type='datetime-local', name='dateandtime', value=sell.dateandtime onblur='valDate()')
           .row
             .tableRow.col
               label Tonnage (kgs)
-              input(type='number', name='tonnage', onblur='valTonnage()')
+              input(type='number', name='tonnage', value=sell.tonnage onblur='valTonnage()')
           .row
             div
               label
