@@ -74,21 +74,21 @@ const valPass = () =>{
     
 };
 
-// const valEmail = () =>{
-//     let email = document.registration.email;
-//     let emil = /^[a-zA-Z0-9]+$/;
-//     if(email.value.length || !email.value.match(emil)
+const valEmail = () =>{
+    let valueemail = document.registration.email;
+        if(
+            valueemail.value == ''
+        ){
+            role.style.border ='2px Solid red'
+            return false;
+        }
+        else {
+            role.style.border ='2px solid white'
+            return true;
+        }
         
-//     ){
-//         pass.style.border ='2px Solid red'
-//         return false;
-//     }
-//     else {
-//         pass.style.border ='2px solid brown'
-//         return true;
-//     }
+    };
     
-// };
 
 const valPasso = () =>{
     let pass = document.registration.password;

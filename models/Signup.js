@@ -5,9 +5,11 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const signupSchema = new mongoose.Schema({
     firstname: {
     type: String,
+    trim:true,
   },
   surname: {
     type:String,
+    trim:true,
   },
 
   branch:{
@@ -20,12 +22,15 @@ const signupSchema = new mongoose.Schema({
 
   email:{
     type:String,
+    required:true,
+    unique:true,
     trim:true,
 
   },
 
   password:{
     type:String,
+    trim:true,
   
   },
   

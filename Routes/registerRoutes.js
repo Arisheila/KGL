@@ -48,7 +48,29 @@ router.post('/register/delete', async (req, res) => {
         res.status(400).send("Unable to delete item in the database");
     }
 });
+//edit routes 
+router.get('/register/edit/:id', async(req, res) => {
+    try{
+      const staff = await Signup.findOne({_id:req.params.id});
+      res.render('editregister', {signup:staff});
+    }
+    catch(error){
+      res.send("Register list not found in DB");
+    }
+    });
 
+//updating
+router.post('/register/edit', async(req, res) => {
+    try{
+      await Signup.findOneAndUpdate({_id:req.query.id},req.body);
+      
+      res.redirect('/report/register');
+    }
+    catch(error){
+      res.send("Failed to update register report");
+      console.log(error);
+    }
+   }); 
 
 
 

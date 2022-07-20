@@ -23,14 +23,10 @@ block content
                             td #{signup.surname}
                             td #{signup.branch}
                             td #{signup.role}
-                            td #{signup.email}
-                            
-                                // "/products/edit/" are routes to be created inorder for it to work
-                                //-  a.button2(href="/products/edit/"+signup.firstname) Edit 
-                                
+                            td #{signup.email}    
                             td
-                                a.btn.btn-dark.btn-block(href='/register/editregister/'+signup.id) Edit
-                                    // '/products/delete' are routers to create to delet differently
+                                a.btn.btn-dark.btn-block(href='/register/edit/'+signup._id) Edit
+                                    
                                     
 
                             td
@@ -41,4 +37,5 @@ block content
 
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')
+    script(src='/javascript/register.js')
     

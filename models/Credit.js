@@ -5,13 +5,16 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const creditSchema = new mongoose.Schema({
     buyername: {
     type: String,
+    trim:true,
   },
   nationalid: {
     type:String,
+    trim:true,
   },
 
   location:{
     type:String,
+    trim:true,
   },
   contact:{
     type:Number,
@@ -24,20 +27,24 @@ const creditSchema = new mongoose.Schema({
 
   salesagent:{
     type:String,
+    trim:true,
   
   },
   tonnage:{
     type:Number,
   
   },
+
+  goods:{
+    type:String,
+    trim:true,
+  },
+
   nameofproduce:{
     type:String,
   
   },
 
-  goods:{
-    type:String,
-  },
   date:{
     type:Date,
   
@@ -47,8 +54,6 @@ const creditSchema = new mongoose.Schema({
     type:Date,
   
   },
-  
-
   
   branch:{
     type:String,

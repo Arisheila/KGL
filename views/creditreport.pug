@@ -43,7 +43,7 @@ block content
                       td #{credit.branch}
                       td #{credit.tonnage}     
                       td
-                        a.btn.btn-dark.btn-block(href='/credit/edit/'+credit.id) Edit
+                        a.btn.btn-dark.btn-block(href='/credit/edit/'+credit._id) Edit
                       td
                         form.delete(method='post', action='/credit/delete')
                           input(type='hidden', name="id", value=credit._id)

@@ -26,6 +26,7 @@ const ProcurementSchema = new mongoose.Schema({
 
   nameofthedealer:{
     type:String,
+    trim:true,
   },
 
   pricetosold:{
@@ -39,10 +40,9 @@ const ProcurementSchema = new mongoose.Schema({
 
   goods: {
     type:String,
+    trim:true,
   },
    
-
-
 
 });
 

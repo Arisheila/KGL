@@ -13,6 +13,7 @@ block content
               tr
                 th Name of produce(kgs)
                 th Branch
+                th Date/Time of produce:
                 th Tonnage(kgs)
                 th Cost(ugx)
                 th Name of the dealer
@@ -27,6 +28,7 @@ block content
                   tr
                     td #{purchase.nameofProduce}
                     td #{purchase.branch}
+                    td #{purchase.date}
                     td #{purchase.tonnage}
                     td #{purchase.thecost} 
                     td #{purchase.nameofthedealer} 
@@ -41,4 +43,4 @@ block content
                         button(type='submit') Delete
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')
-    script(src='/javascript/register.js')   
+    script(src='/javascript/procurement.js')   

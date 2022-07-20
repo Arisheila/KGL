@@ -16,7 +16,7 @@ block content
                 th Amount paid(ugx) 
                 th Buyer's Name:
                 th Sales agent's name:
-                  //- th Date and Time
+                th Date and Time
                 th Tonnage
                 th Edit 
                 th Delete
@@ -28,8 +28,8 @@ block content
                     td #{sale.branch} 
                     td #{sale.amountpaid} 
                     td #{sale.buyername} 
-                    td  #{sale.agentsname}
-                      //- td #{sale.dateandtime} 
+                    td #{sale.agentsname}
+                    td #{sale.dateandtime} 
                     td #{sale.tonnage}
                     td
                       a.btn.btn-dark.btn-block(href='/sales/edit/'+sale._id) Edit

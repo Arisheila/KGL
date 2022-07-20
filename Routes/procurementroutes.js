@@ -34,9 +34,9 @@ router.get('/purchases/report',async (req, res) => {
         }}
 
         ])
-        
         res.render('purchasereport',{
-            purchases:items, total:totalProcure[0]})
+            purchases:items,total:totalProcure[0]
+           }  )
     }
     catch(err){
         console.log(err)
@@ -58,8 +58,7 @@ router.post('/purchases/delete', async (req, res) => {
 // get the update form
 router.get('/purchases/edit/:id', async(req, res) => {
 try{
- 
-  const procure = await Procurement.findOne({id:req.params.id});
+  const procure = await Procurement.findOne({_id:req.params.id});
   res.render('editpurchase', {purchase:procure});
 }
 catch(error){

@@ -93,7 +93,7 @@ router.post('/credit/delete', async (req, res) => {
         res.status(400).send("Unable to delete item in the database");
     }
 });
-//sales
+//salesReport rendering
 router.post('/sales/delete', async (req, res) => {
     try {
         await Sales.deleteOne({ _id: req.body.id })
@@ -103,49 +103,53 @@ router.post('/sales/delete', async (req, res) => {
     }
 });
 
-// edit routes for sales report
-// get the update form
-// router.get('/sales/edit/:id', async(req, res) => {
-//     try{
-     
-//       const sell = await Sales.findOne({id:req.params.id});
-//       res.render('editsale', {sale:sell});
-//     }
-//     catch(error){
-//       res.send("Sales not found in DB");
-//     }
-//     });
-
-
-
-    //  update sales infotmation
-    // router.post('/purchases/edit/', async(req, res) => {
-    //   try{
-        
-    //     await Procurement.findOneAndUpdate({_id:req.query.id},req.body);
-        
-    //     res.redirect('/purchases/report');
-    //   }
-    //   catch(error){
-    //     res.send("Failed to update procurement report");
-    //     console.log(error);
-    //   }
-    //  });
-
-
-    // edit routes for Credit report
-// get the update form
-router.get('/credit/edit/:id', async(req, res) => {
+//editsale Routes Rendering update form
+router.get('/sales/edit/:id', async(req, res) => {
     try{
-     
-      const deffered = await Credit.findOne({id:req.params.id});
-      res.render('editcredit', {sale:deffered});
+      const sell = await Sales.findOne({_id:req.params.id});
+      res.render('editsale', {sale:sell});
     }
     catch(error){
-      res.send("Credit not found in DB");
+      res.send("Sales not found in DB");
     }
     });
+//update Routes
+router.post('/sales/edit', async(req, res) => {
+    try{
+      await Sales.findOneAndUpdate({_id:req.query.id},req.body);
       
+      res.redirect('/sales/report');
+    }
+    catch(error){
+      res.send("Failed to update sales report");
+      console.log(error);
+    }
+   });   
+   
+   //editCredit Routes rending credit update form
+   router.get('/credit/edit/:id', async(req, res) => {
+    try{
+      const deffered = await Credit.findOne({_id:req.params.id});
+      res.render('editcredit', {credit:deffered});
+    }
+    catch(error){
+      res.send("creditreport not found in DB");
+    }
+    });
+
+    //update Routes for credit form
+    router.post('/credit/edit', async(req, res) => {
+        try{
+          await Credit.findOneAndUpdate({_id:req.query.id},req.body);
+          
+          res.redirect('/credit/report');
+        }
+        catch(error){
+          res.send("Failed to update credit report");
+          console.log(error);
+        }
+       }); 
+
 
 
 

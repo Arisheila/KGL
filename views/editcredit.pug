@@ -52,58 +52,57 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form(action="/credit/edit?id="+credit._id method="POST" name='registration' onblur='firstFocus()')
+      form(method="POST" action="/credit/edit?id="+credit._id name='registration' onblur='firstFocus()')
         .brand-title Credit Sales Input
         .inputs
           .row
             .tableRow.col
               label Name of buyer
-              input(type='alphanumeric', name='buyername', onblur='valBuyer()' value = credit.buyername)
+              input(type='alphanumeric', name='buyername', onblur='valBuyer()' value=credit.buyername)
             .tableRow.col
               label National ID:
-              input(type='alphanumeric', name='nationalid', onblur='valNin()' value = credit.nationalid)
+              input(type='alphanumeric', name='nationalid', onblur='valNin()' value=credit.nationalid)
           .row
             .tableRow.col
               label Location
-              input(type='text', name='location', onblur='valLoc()' value = credit.location)
+              input(type='text', name='location', onblur='valLoc()' value=credit.location)
             .tableRow.col
               label Contacts
-              input(type='number', name='contact', placeholder='0783023810', onblur='valCon()' value = credit.contact)
+              input(type='number', name='contact', placeholder='0783023810', onblur='valCon()' value=credit.contact)
           .row
             .tableRow.col
               label Amount due
-              input(type='number', name='amountdue', onblur='valDue()' value = credit.amountdue)
+              input(type='number', name='amountdue', onblur='valDue()' value=credit.amountdue)
             .tableRow.col
               label Sales Agent
-              input(type='text', name='salesagent', onblur='valAgent()' value = credit.salesagent)
+              input(type='text', name='salesagent', onblur='valAgent()' value=credit.salesagent)
           .row
             .tableRow.col
               label Tonnage(kgs)
-              input(type='number', name='tonnage', onblur='valTonnage()' value = credit.tonnage)
+              input(type='number', name='tonnage', onblur='valTonnage()' value=credit.tonnage)
             .tableRow.col
               label Produce name
-              select(name="nameofproduce" onblur="valProduce()" value = credit.nameofproduce)
+              select(name="nameofproduce" onblur="valProduce()")
                 option(value='beans' selected=credit.nameofproduce==='beans') Beans
-                option(value='grain' selected=credit.nameofProduce==='beans') Grain
-                option(value='maize' selected=credit.nameofProduce==='beans') Maize
-                option(value='cowpeas' selected=credit.nameofProduce==='beans') Cowpeas
-                option(value='gnuts' selected=credit.nameofProduce==='beans') G-nuts
-                option(value='soyabeans' selected=credit.nameofProduce==='beans') Soya Beans
+                option(value='maize' selected=credit.nameofProduce==='maize') Maize
+                option(value='cowpeas' selected=credit.nameofProduce==='cowpeas') Cowpeas
+                option(value='gnuts' selected=credit.nameofProduce==='gnuts') G-nuts
+                option(value='soyabeans' selected=credit.nameofProduce==='soyabeans') Soya Beans
             .tableRow.col
                 label Type of produce:
-                input(type='text', name='goods', onblur='valTop()' value = credit.goods)       
+                input(type='text', name='goods', onblur='valTop()' value=credit.goods)       
           .row
             .tableRow.col
               label Due Date:
-              input(type='datetime-local', name='date', onblur='valDate()' value = sale.date)
+              input(type='datetime-local', name='date', onblur='valDate()' value=credit.date)
             .tableRow.col
               label Date of dispatch
-              input(type='datetime-local', name='dispatch', onblur='valDispatch()'value = sale.dispatch )    
+              input(type='datetime-local', name='dispatch', onblur='valDispatch()' value=credit.dispatch )    
             .tableRow.col
               label Branch
-              select(name='branch' onblur="valBran()" value = credit.branch)
+              select(name='branch' onblur="valBran()")
                 option(value='ggaba' selected=credit.branch==='ggaba') Ggaba
-                option(value='ntinda' selected=purchase.branch==='ntinda') Ntinda 
+                option(value='ntinda' selected=credit.branch==='ntinda') Ntinda 
           div
             label
             button#mybutton.btnc Update

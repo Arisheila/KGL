@@ -53,7 +53,7 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT  
     .container
-      form( action="/sales/edit?id="+purchase._id method="POST" name='registration', onblur='firstFocus()')
+      form( action="/sales/edit?id="+sale._id  method="POST" name='registration' onblur='firstFocus()')
         .brand-title Sales Input
         .inputs
           .row
@@ -70,7 +70,7 @@ html(lang='en')
               label Branch
               select(name='branch' onblur='valBran()')
                 option(value='ggaba' selected=sale.branch==='ggaba') Ggaba
-                option(value='ntinda'selected=sale.branch==='ntinda') Ntinda
+                option(value='ntinda' selected=sale.branch==='ntinda') Ntinda
           .row
             .tableRow.col
               label Amount paid(ugx)

@@ -5,6 +5,7 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const salesSchema = new mongoose.Schema({
     producename: {
     type: String,
+    trim:true,
   },
   branch:{
     type:String,
@@ -16,10 +17,12 @@ const salesSchema = new mongoose.Schema({
 
   buyername:{
     type: String,
+    trim:true,
   
   },
   agentsname:{
     type: String,
+    trim:true,
 
   },
   dateandtime:{
