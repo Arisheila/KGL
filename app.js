@@ -55,13 +55,14 @@ passport.use(Signup.createStrategy());
 passport.serializeUser(Signup.serializeUser());
 passport.deserializeUser(Signup.deserializeUser());
 
-// const loginchecker = function(req,res,next){
-//   if (req.path != '/login' && req.path != '/register' && !req.session.user){
-//     res.redirect('/register')
-//   }
-//   next()
-// }
-// server.use(loginchecker)
+//loginChecker
+const loginchecker = function(req,res,next){
+  if (req.path != '/login' && req.path != '/landing' && !req.session.user){
+    res.redirect('/landing')
+  }
+  next()
+}
+app.use(loginchecker)
 
 //setting up Routes
 app.use('/', loginRoutes);

@@ -50,13 +50,13 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form(name='registration', onblur='firstFocus()')
+      form(action='/login' method='POST' name='registration', onblur='firstFocus()')
         .brand-title LOGIN
         .inputs
           label EMAIL
-          input(type='email', placeholder='example@test.com')
+          input(type='email', name='email' placeholder='example@test.com')
           label PASSWORD
-          input(type='password', name='password', placeholder='Min 4 charaters', onblur='valPass() ')
+          input(type='password', name='password', placeholder='Min 4 charaters', onblur='valPasso() ')
           button(type='submit') LOGIN
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')
