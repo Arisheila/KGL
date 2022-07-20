@@ -53,48 +53,46 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT  
     .container
-      form( action="/editsale" method="POST" name='registration', onblur='firstFocus()')
+      form( action="/sales/edit?id="+purchase._id method="POST" name='registration', onblur='firstFocus()')
         .brand-title Sales Input
         .inputs
           .row
             .tableRow.col
               label Name of produce(kgs):
-              select(name='producename' value=sell.producename onblur='valProd()')
-                option(value='')  Select name of produce
-                option(value='Beans') Beans
-                option(value='Grain') Grain
-                option(value='Maize') Maize
-                option(value='cowpeas') Cowpeas
-                option(value='G_nuts') G-nuts
-                option(value='Soya Beans') Soya Beans
+              select(name='producename' onblur='valProd()')
+                option(value='beans' selected=sale.producename==='beans') Beans
+                option(value='grain' selected=sale.producename==='grain') Grain
+                option(value='maize' selected=sale.producename==='maize') Maize
+                option(value='cowpeas' selected=sale.producename==='cowpeas') Cowpeas
+                option(value='gnuts' selected=sale.producename==='gnuts') G-nuts
+                option(value='soyabeans' selected=sale.producename==='soyabeans') Soya Beans
             .tableRow.col
               label Branch
-              select(name='branch' value = sell.branch onblur='valBran()')
-                option(value='') Branch Name
-                option(value='Ggaba') Ggaba
-                option(value='ntinda') Ntinda
+              select(name='branch' onblur='valBran()')
+                option(value='ggaba' selected=sale.branch==='ggaba') Ggaba
+                option(value='ntinda'selected=sale.branch==='ntinda') Ntinda
           .row
             .tableRow.col
               label Amount paid(ugx)
-              input(type='number', name='amountpaid', value = sell.amountpaid onblur='valPaid()')
+              input(type='number', name='amountpaid', onblur='valPaid()' value = sale.amountpaid)
             .tableRow.col
               label Buyer's Name:
-              input(type='alphanumeric', name='buyername',value =sell.buyername  onblur='valBuyer()')
+              input(type='alphanumeric', name='buyername', onblur='valBuyer()' value = sale.buyername)
           .row
             .tableRow.col
               label Sales agent's name:
-              input(type='alphanumeric', name='agentsname',value=sell.agentsname onblur='valSale()')
+              input(type='alphanumeric', name='agentsname', onblur='valSale()' value = sale.agentsname)
             .tableRow.col
               label Date and Time 
-              input(type='datetime-local', name='dateandtime', value=sell.dateandtime onblur='valDate()')
+              input(type='datetime-local', name='dateandtime', onblur='valDate()' value = sale.dateandtime)
           .row
             .tableRow.col
               label Tonnage (kgs)
-              input(type='number', name='tonnage', value=sell.tonnage onblur='valTonnage()')
+              input(type='number', name='tonnage',onblur='valTonnage()' value = sale.tonnage)
           .row
             div
               label
-              button#mybutton.btnc Submit
+              button#mybutton.btnc Update
      
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')

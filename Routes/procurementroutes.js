@@ -26,7 +26,7 @@ router.post('/purchases', async(req,res)=>{
 //making purchase report routes
 router.get('/purchases/report',async (req, res) => {
     try{
-        let procure = await Procurement.find();
+        let items = await Procurement.find();
         let totalProcure = await Procurement.aggregate([
             {'$group':{_id:'$all',
             totalCost:{$sum:'$thecost'},
@@ -36,7 +36,7 @@ router.get('/purchases/report',async (req, res) => {
         ])
         
         res.render('purchasereport',{
-            purchases:procure, total:totalProcure[0]})
+            purchases:items, total:totalProcure[0]})
     }
     catch(err){
         console.log(err)
@@ -60,19 +60,16 @@ router.get('/purchases/edit/:id', async(req, res) => {
 try{
  
   const procure = await Procurement.findOne({id:req.params.id});
-
-  // user is what the pug file uses for identifying id
-  res.render('editpurchase', {purchases:procure});
+  res.render('editpurchase', {purchase:procure});
 }
 catch(error){
   res.send("Purchases not found in DB");
 }
 });
 
-//  update sales infotmation
-router.post('/edit/', async(req, res) => {
+//  update purchase information
+router.post('/purchases/edit', async(req, res) => {
   try{
-    
     await Procurement.findOneAndUpdate({_id:req.query.id},req.body);
     
     res.redirect('/purchases/report');
