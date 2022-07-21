@@ -2,10 +2,13 @@ extends layout
 block content 
     .container-fluid
       h2 Procurement Records
-      p TOTAL PROCUREMENT COST
-      p #{total.totalCost} UGX
-      P TONNAGE 
-      P #{total.totalTonnage} kgs
+        if purchases.length
+          p TOTAL PROCUREMENT COST
+          p #{total.totalCost} UGX
+          P TONNAGE 
+          P #{total.totalTonnage} kgs
+        else
+          P There are no purchases captured
       .row
         .col.table-responsive
           table.table.table-bordered.table-hover.table-secondary(style='margin-top:15px;')

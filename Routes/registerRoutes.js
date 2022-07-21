@@ -6,7 +6,10 @@ const Signup =require('../models/Signup')
 const router = express.Router();
 
 router.get('/register', (req, res) => {
-    res.render('register')
+    req.session.user=req.user
+    if(req.session.user.role === 'director' || req.session.user.role === 'manager'){
+    res.render('register')}
+    else{res.redirect('/sales')}
 });
 
 //to fill in a form /edit
@@ -29,8 +32,12 @@ router.post('/register', async(req, res) => {
 //router of getting registerReport
 router.get('/report/register',async (req, res) => {
     try{
+        req.session.user=req.user
+    if(req.session.user.role === 'director' || req.session.user.role === 'manager'){
+
         let register = await Signup.find();
-        res.render('registerReport',{signups:register})
+        res.render('registerReport',{signups:register})}
+        else{res.redirect('/sales')}
 
     }
     catch(err){

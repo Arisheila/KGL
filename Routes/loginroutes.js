@@ -16,11 +16,19 @@ router.get('/login', (req, res) => {
 router.post('/login', passport.authenticate('local',{failureRedirect:'/login'}),
 (req,res)=>{
     req.session.user=req.user
-    //take user to dasboard on successful login
-    res.redirect('/sales')
-}
+    if(req.session.user.role === 'director'){
+        res.redirect('/sales/report')
+    }
+    if(req.session.user.role === 'manager'){
+        res.redirect('/purchases')
+    }
+    if(req.session.user.role === 'salesagent'){
+        res.redirect('/sales')
+    }
+    //take user to the page u want on successful login
+    
+});
 
-)
 router.get('/logout', (req, res)=>{
     req.session.destroy(()=>{
         res.redirect('/login')

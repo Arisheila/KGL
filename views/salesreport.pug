@@ -2,10 +2,13 @@ extends layout
 block content
     .container-fluid
       h2 Sales Report
-      p TOTAL REVENUE RECEIVED 
-      p #{total.totalRevenue} ugx 
-      p TOTAL TONNAGE SOLD OUT 
-      p #{total.totalTonnage} kgs
+            if sales.length
+              p TOTAL REVENUE RECEIVED 
+              p #{total.totalRevenue} ugx 
+              p TOTAL TONNAGE SOLD OUT 
+              p #{total.totalTonnage} kgs
+            else 
+              p There are no sales captured
       .row
         .col.table-responsive
           table.table.table-bordered.table-hover.table-secondary(style='margin-top:15px;')
@@ -22,7 +25,7 @@ block content
                 th Delete
             tbody    
             if sales.length
-              each sale in sales
+              each sale in sales  
                   tr
                     td #{sale.producename}
                     td #{sale.branch} 

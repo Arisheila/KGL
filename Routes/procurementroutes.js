@@ -7,7 +7,13 @@ const Procurement = require('../models/Procurement');
 const router = express.Router();
 
 router.get('/purchases', (req, res) => {
-    res.render('procurement')
+    req.session.user=req.user
+    if(req.session.user.role === 'director' || req.session.user.role === 'manager'){
+    res.render('procurement')}
+    else{
+        res.redirect('/sales')
+    }
+    
 });
 
 router.post('/purchases', async(req,res)=>{
@@ -24,8 +30,10 @@ router.post('/purchases', async(req,res)=>{
 });
 
 //making purchase report routes
-router.get('/purchases/report',async (req, res) => {
+router.get('/purchases/report', async(req, res) => {
     try{
+        req.session.user=req.user
+    if(req.session.user.role === 'director' || req.session.user.role === 'manager'){
         let items = await Procurement.find();
         let totalProcure = await Procurement.aggregate([
             {'$group':{_id:'$all',
@@ -36,7 +44,8 @@ router.get('/purchases/report',async (req, res) => {
         ])
         res.render('purchasereport',{
             purchases:items,total:totalProcure[0]
-           }  )
+           }  )}
+       else{res.redirect('/sales')}    
     }
     catch(err){
         console.log(err)

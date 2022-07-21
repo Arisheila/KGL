@@ -43,6 +43,10 @@ router.post('/credit', async(req,res)=>{
 // reports rendering 
 router.get('/sales/report',async (req, res) => {
     try{
+        //restricting user session
+        req.session.user=req.user
+    if(req.session.user.role === 'director' || req.session.user.role === 'manager'){
+
         let items = await Sales.find();
         let totalSales = await Sales.aggregate([
             {'$group':{_id:'$all',
@@ -54,7 +58,10 @@ router.get('/sales/report',async (req, res) => {
         res.render('salesreport',{
             sales:items,
             total:totalSales[0] 
-        })
+        })}
+       else{
+        res.redirect('/sales')
+       } 
 
     }
     catch(err){
@@ -65,6 +72,8 @@ router.get('/sales/report',async (req, res) => {
 
 router.get('/credit/report',async (req, res) => {
     try{
+        req.session.user=req.user
+    if(req.session.user.role === 'director' || req.session.user.role === 'manager'){
         let items = await Credit.find();
         let totalCredit = await Credit.aggregate([
             {'$group':{_id:'$all',
@@ -77,6 +86,9 @@ router.get('/credit/report',async (req, res) => {
             credits:items, total:totalCredit[0]})
 
     }
+    else{res.redirect('/credit')}
+}
+    
     catch(err){
         console.log(err)
         res.send('failed to retrive credit details')
