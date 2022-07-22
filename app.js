@@ -48,6 +48,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressSession);
 
+// configuring passport
 app.use(passport.initialize());
 app.use(passport.session());
 
