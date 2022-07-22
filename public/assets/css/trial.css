@@ -170,3 +170,14 @@ width:80px;
   transition: 0.5s;
 
 }
+.card{
+  margin: 5px;
+}
+
+.card-text{
+  font-style: Tachoma;
+
+}
+.card-body{
+  background-color:burlywood;  
+}

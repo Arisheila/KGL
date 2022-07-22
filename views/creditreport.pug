@@ -1,11 +1,17 @@
 extends layout 
 block content
     .container-fluid
-      h2 Credit Records
-      p TOTAL AMOUNT DUE 
-      p #{total.totalAmountdue} ugx 
-      p TOTAL TONNAGE SOLD OUT 
-      p #{total.totalTonnage} kgs
+      .card.col-md-3
+        .card-body
+          h5.card-title CREDIT RECORDS
+          h6.card-subtitle.mb-2.text-muted TOTALS
+        if credits.length
+          p.card-text.fw-bold.fs-6  TOTAL AMOUNT DUE 
+          p.card-text.fs-6 #{total.totalAmountdue} ugx 
+          p.card-text.fw-bold.fs-6 TOTAL TONNAGE SOLD OUT 
+          p.card-text.fs-6 #{total.totalTonnage} kgs
+        else 
+
       .row
         .col.table-responsive
           table.table.table-bordered.table-hover.table-secondary(style='margin-top:15px;')
@@ -24,6 +30,7 @@ block content
                   th Branch
                   th Tonnage
                   th Edit 
+            
                   th Delete
             tbody
             if credits.length

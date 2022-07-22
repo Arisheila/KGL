@@ -80,6 +80,11 @@ html(lang='en')
             .tableRow.col
               label Tonnage(kgs)
               input(type='number', name='tonnage', onblur='valTonnage()' value=credit.tonnage)
+            
+            .tableRow.col
+                label Type of produce:
+                input(type='text', name='goods', onblur='valTop()' value=credit.goods)       
+          .row
             .tableRow.col
               label Produce name
               select(name="nameofproduce" onblur="valProduce()")
@@ -88,16 +93,12 @@ html(lang='en')
                 option(value='cowpeas' selected=credit.nameofProduce==='cowpeas') Cowpeas
                 option(value='gnuts' selected=credit.nameofProduce==='gnuts') G-nuts
                 option(value='soyabeans' selected=credit.nameofProduce==='soyabeans') Soya Beans
-            .tableRow.col
-                label Type of produce:
-                input(type='text', name='goods', onblur='valTop()' value=credit.goods)       
-          .row
-            .tableRow.col
-              label Due Date:
-              input(type='datetime-local', name='date', onblur='valDate()' value=credit.date)
-            .tableRow.col
-              label Date of dispatch
-              input(type='datetime-local', name='dispatch', onblur='valDispatch()' value=credit.dispatch )    
+            //-   .tableRow.col
+            //-     label Due Date:
+            //-     input(type='datetime-local', name='date', onblur='valDate()' value=credit.date)
+            //-   .tableRow.col
+            //-     label Date of dispatch
+            //-     input(type='datetime-local', name='dispatch', onblur='valDispatch()' value=credit.dispatch )    
             .tableRow.col
               label Branch
               select(name='branch' onblur="valBran()")
