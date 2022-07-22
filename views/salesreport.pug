@@ -1,7 +1,16 @@
 extends layout 
 block content
     .container-fluid
-      h2 Sales Report
+      .card.col-md-3
+        .card-body
+          h5.card-title CREDIT RECORDS
+          h6.card-subtitle.mb-2.text-muted TOTALS
+        if sales.length
+          p.card-text.fw-bold.fs-6  TOTAL REVENUE RECEIVED :
+            strong.card-text.fs-6.danger  -#{total.totalAmountdue} ugx 
+          p.card-text.fw-bold.fs-6 TOTAL TONNAGE SOLD OUT : 
+            strong.card-text.fs-6 #{total.totalTonnage} kgs
+
             if sales.length
               p TOTAL REVENUE RECEIVED 
               p #{total.totalRevenue} ugx 

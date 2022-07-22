@@ -6,10 +6,10 @@ block content
           h5.card-title CREDIT RECORDS
           h6.card-subtitle.mb-2.text-muted TOTALS
         if credits.length
-          p.card-text.fw-bold.fs-6  TOTAL AMOUNT DUE 
-          p.card-text.fs-6 #{total.totalAmountdue} ugx 
-          p.card-text.fw-bold.fs-6 TOTAL TONNAGE SOLD OUT 
-          p.card-text.fs-6 #{total.totalTonnage} kgs
+          p.card-text.fw-bold.fs-6  TOTAL AMOUNT DUE :
+            strong.card-text.fs-6.danger  -#{total.totalAmountdue} ugx 
+          p.card-text.fw-bold.fs-6 TOTAL TONNAGE SOLD OUT : 
+            strong.card-text.fs-6 #{total.totalTonnage} kgs
         else 
 
       .row

@@ -181,3 +181,17 @@ width:80px;
 .card-body{
   background-color:burlywood;  
 }
+.container {
+  position: relative;
+  width: 780px;
+  height: 520px;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+.danger{
+  color: red;
+}
+
