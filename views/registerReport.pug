@@ -1,7 +1,7 @@
 extends layout 
 block content 
     .container-fluid
-      h2 Register Records
+      h5 REGISTERED STAFF 
       .row
         .col.table-responsive
           table.table.table-bordered.table-hover.table-secondary(style='margin-top:15px;')
@@ -25,9 +25,7 @@ block content
                             td #{signup.role}
                             td #{signup.email}    
                             td
-                                a.btn.btn-dark.btn-block(href='/register/edit/'+signup._id) Edit
-                                    
-                                    
+                                a.btn.btn-dark.btn-block(href='/register/edit/'+signup._id) Edit        
 
                             td
                                 form.delete(method='post', action='/register/delete')

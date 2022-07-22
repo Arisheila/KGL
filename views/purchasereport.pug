@@ -1,15 +1,18 @@
 extends layout 
 block content 
     .container-fluid
-      h2 Procurement Records
+      .card.col-md-3
+        .card-body
+          h5.card-title PROCUREMENT RECORDS
+          h6.card-subtitle.mb-2.text-dark Totals
         if purchases.length
-          p TOTAL PROCUREMENT COST
-          p #{total.totalCost} UGX
-          P TONNAGE 
-          P #{total.totalTonnage} kgs
+          p.card-text.fw-bold.fs-6 TOTAL PROCUREMENT COST :
+            strong.card-text.fs-6 #{total.totalCost} ugx 
+          p.card-text.fw-bold.fs-6 TOTAL TONNAGE SOLD OUT : 
+            strong.card-text.fs-6 #{total.totalTonnage} kgs
         else
-          P There are no purchases captured
-      .row
+          p There are no credit sales captured 
+      .row 
         .col.table-responsive
           table.table.table-bordered.table-hover.table-secondary(style='margin-top:15px;')
             thead

@@ -4,13 +4,14 @@ block content
       .card.col-md-3
         .card-body
           h5.card-title CREDIT RECORDS
-          h6.card-subtitle.mb-2.text-muted TOTALS
+          h6.card-subtitle.mb-2.text-dark TOTALS
         if credits.length
           p.card-text.fw-bold.fs-6  TOTAL AMOUNT DUE :
             strong.card-text.fs-6.danger  -#{total.totalAmountdue} ugx 
           p.card-text.fw-bold.fs-6 TOTAL TONNAGE SOLD OUT : 
             strong.card-text.fs-6 #{total.totalTonnage} kgs
-        else 
+        else
+          p There are no credit sales captured 
 
       .row
         .col.table-responsive
