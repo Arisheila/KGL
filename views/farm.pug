@@ -4,7 +4,7 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Sales Portal
+    title Purchases Portal
     link(rel='stylesheet', href='/assets/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/assets/css/login.css')
     link(rel='stylesheet', href='/assets/css/page.css')
@@ -62,47 +62,46 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form( action="/sales/edit?id="+sale._id  method="POST" name='registration' onblur='firstFocus()')
-        .brand-title Sales Input
+      form( action="/farm" method="POST" name='registration' onblur='firstFocus()' )
+        .brand-title FARM RECORDS
         .inputs
           .row
             .tableRow.col
-              label Name of produce(kgs):
-              select(name='producename' onblur='valProd()')
-                option(value='beans' selected=sale.producename==='beans') Beans
-                option(value='grain' selected=sale.producename==='grain') Grain
-                option(value='maize' selected=sale.producename==='maize') Maize
-                option(value='cowpeas' selected=sale.producename==='cowpeas') Cowpeas
-                option(value='gnuts' selected=sale.producename==='gnuts') G-nuts
-                option(value='soyabeans' selected=sale.producename==='soyabeans') Soya Beans
+              label Name of produce (kgs)
+              select(name='nameofProduce' onblur='valProduce()')
+                option(value='') Name of goods
+                option(value='beans') Beans
+                option(value='maize') Maize
+                option(value='cowpeas') Cowpeas
+                option(value='gnuts') G-nuts
+                option(value='soyabeans') Soya Beans
             .tableRow.col
               label Branch
               select(name='branch' onblur='valBran()')
-                option(value='ggaba' selected=sale.branch==='ggaba') Ggaba
-                option(value='ntinda' selected=sale.branch==='ntinda') Ntinda
+                option(value='') Branch Name
+                option(value='ggaba') Ggaba
+                option(value='ntinda') Ntinda
           .row
             .tableRow.col
-              label Amount paid(ugx)
-              input(type='number', name='amountpaid', onblur='valPaid()' value = sale.amountpaid)
-            .tableRow.col
-              label Buyer's Name:
-              input(type='alphanumeric', name='buyername', onblur='valBuyer()' value = sale.buyername)
-          .row
-            .tableRow.col
-              label Sales agent's name:
-              input(type='alphanumeric', name='agentsname', onblur='valSale()' value = sale.agentsname)
-            .tableRow.col
-              label Date and Time 
-              input(type='datetime-local', name='dateandtime', onblur='valDate()' value = sale.dateandtime)
-          .row      
+              label Date/Time of produce:
+              input(type='datetime-local', name='date', onblur='valdate()')
             .tableRow.col
               label Tonnage (kgs)
-              input(type='number', name='tonnage',onblur='valTonnage()' value = sale.tonnage)
+              input(type='number', name='tonnage', onblur='valTon()')
           .row
-            div
+            .tableRow.col
+              label Price to be sold (per kg) :
+              input(type='number', name='pricetosold', onblur='valPrice()')
+              span#paiderror
+          .row  
+            .tableRow.col
+              label Comments:
+              input(type='text', name='comments', placeholder='comments')
+              
+          .row
+            .tableRow
               label
-              button#mybutton.btnc Update
-     
+              button#mybutton.btnc(type="submit") Submit
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')
-    script(src='/javascript/sale.js')
+    script(src='/javascript/procurement.js')

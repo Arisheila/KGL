@@ -26,14 +26,6 @@ html(lang='en')
                   a.dropdown-item(href='/sales/report') Sales Records
             li.nav-item.dropdown
               a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
-                | PROCUREMENT
-              ul.dropdown-menu(aria-labelledby='navbarDropdown')
-                li
-                  a.dropdown-item(href='/purchases') Procurement Input
-                li
-                  a.dropdown-item(href='/purchases/report') Procurement Records
-            li.nav-item.dropdown
-              a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
                 | CREDIT SALES
               ul.dropdown-menu(aria-labelledby='navbarDropdown')
                 li
@@ -42,15 +34,31 @@ html(lang='en')
                   a.dropdown-item(href='/credit/report') Credit Sales Records
             li.nav-item.dropdown
               a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                | PROCUREMENT
+              ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                li
+                  a.dropdown-item(href='/purchases') Procurement Input
+                li
+                  a.dropdown-item(href='/purchases/report') Procurement Records
+            
+            li.nav-item.dropdown
+              a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                | FARM DETAILS
+              ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                li
+                  a.dropdown-item(href='/farm') Farm Record Input
+                li
+                  a.dropdown-item(href='/farm/report') Farm Report
+            li.nav-item.dropdown
+              a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
                 | REGISTER
               ul.dropdown-menu(aria-labelledby='navbarDropdown')
                 li
                   a.dropdown-item(href='/register') Register Here
                 li
-                a.dropdown-item(href='/report/register') Register Records  
+                  a.dropdown-item(href='/report/register') Register Records  
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
-    |  
     .container
       form(name='registration' onblur='firstFocus()' action="/register" method="POST" )
         .brand-title REGISTER HERE
