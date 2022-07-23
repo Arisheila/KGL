@@ -169,6 +169,22 @@ const valTop =() =>{
    
 };
 
+const valCom =() => {
+    let comment = document.registration.comments;
+    if(
+        comment.value == ''
+    ){
+        comment.style.border ='2px Solid red'
+        return false;
+    }
+    else {
+        comment.style.border='2px solid white'
+        comment.focus();
+        return true;
+    }
+    
+};
+
 
 
 

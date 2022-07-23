@@ -87,14 +87,14 @@ html(lang='en')
             .tableRow.col
               label Tonnage (kgs)
               input(type='number', name='tonnage', value = harvest.tonnage onblur='valTon()')
-          .row
             .tableRow.col
               label Price to be sold :
               input(type='number', name='pricetosold', value = harvest.pricetosold onblur='valPrice()')
               span#paiderror
+          .row    
             .tableRow.col
               label Comments:
-              input(type='text', name='comments', placeholder='comments', value = harvest.comments)  
+              input(type='text', name='comments', placeholder='comments', value = harvest.comments onblur='valCom()')  
           .row
             .tableRow
               label
