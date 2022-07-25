@@ -45,6 +45,8 @@ router.get('/sales/report',async (req, res) => {
     try{
         //restricting user session
         req.session.user=req.user
+        let user = req.session.user;
+        res.locals.user = user;
     if(req.session.user.role === 'director' || req.session.user.role === 'manager'){
 
         let items = await Sales.find();
@@ -69,10 +71,13 @@ router.get('/sales/report',async (req, res) => {
         res.send('failed to retrive sales details')
     }
 });
-
+// credit Report
 router.get('/credit/report',async (req, res) => {
     try{
-        req.session.user=req.user
+        req.session.user=req.user;
+        let user = req.session.user;
+        res.locals.user = user;
+        
     if(req.session.user.role === 'director' || req.session.user.role === 'manager'){
         let items = await Credit.find();
         let totalCredit = await Credit.aggregate([

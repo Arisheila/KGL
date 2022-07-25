@@ -8,6 +8,7 @@ const router = express.Router();
 
 router.get('/purchases', (req, res) => {
     req.session.user=req.user
+
     if(req.session.user.role === 'director' || req.session.user.role === 'manager'){
     res.render('procurement')}
     else{
@@ -59,6 +60,8 @@ router.post('/farm', async(req,res)=>{
 router.get('/purchases/report', async(req, res) => {
     try{
         req.session.user=req.user
+        let user = req.session.user;
+        res.locals.user = user;
     if(req.session.user.role === 'director' || req.session.user.role === 'manager'){
         let items = await Procurement.find();
         let totalProcure = await Procurement.aggregate([
@@ -83,6 +86,8 @@ router.get('/purchases/report', async(req, res) => {
 router.get('/farm/report', async(req, res) => {
     try{
         req.session.user=req.user
+        let user = req.session.user;
+        res.locals.user = user;
     if(req.session.user.role === 'director' || req.session.user.role === 'manager'){
         let items = await Farm.find();
         let totalProcure = await Farm.aggregate([

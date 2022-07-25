@@ -1,21 +1,24 @@
 extends layout 
 block content 
     .container-fluid
-      .card.col-md-3
-        .card-body
-          h5.card-title PROCUREMENT RECORDS
-          h6.card-subtitle.mb-2.text-dark Totals
-        if purchases.length
-          p.card-text.fw-bold.fs-6 TOTAL PROCUREMENT COST :
-            strong.card-text.fs-6 #{total.totalCost} ugx 
-          p.card-text.fw-bold.fs-6 TOTAL TONNAGE SOLD OUT : 
-            strong.card-text.fs-6 #{total.totalTonnage} kgs
-        else
-          p There are no credit sales captured 
+      if user.role == 'director'
+        .card.col-md-3
+          .card-body
+            h5.card-title PROCUREMENT RECORDS
+            h6.card-subtitle.mb-2.text-dark Totals
+          if purchases.length
+            p.card-text.fw-bold.fs-6 TOTAL PROCUREMENT COST :
+              strong.card-text.fs-6 #{total.totalCost} ugx 
+            p.card-text.fw-bold.fs-6 TOTAL TONNAGE SOLD OUT : 
+              strong.card-text.fs-6 #{total.totalTonnage} kgs
+          else
+            p There are no credit sales captured 
       .row 
         .col.table-responsive
           table.table.table-bordered.table-hover.table-secondary(style='margin-top:15px;')
             thead
+              tr 
+                h5.card-title Purchase Report Records
               tr
                 th Name of produce(kgs)
                 th Branch

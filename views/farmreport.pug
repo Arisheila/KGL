@@ -1,19 +1,22 @@
 extends layout 
 block content 
     .container-fluid
-      .card.col-md-3
-        .card-body
-          h5.card-title FARM REPORT
-          h6.card-subtitle.mb-2.text-dark Totals
-        if harvests.length 
-          p.card-text.fw-bold.fs-6 TOTAL TONNAGE RECORDS : 
-            strong.card-text.fs-6 #{total.totalTonnage} kgs
-        else
-          p There are no farm records captured 
+      if user.role == 'director'
+        .card.col-md-3
+          .card-body
+            h5.card-title FARM REPORT
+            h6.card-subtitle.mb-2.text-dark Totals
+          if harvests.length 
+            p.card-text.fw-bold.fs-6 TOTAL TONNAGE RECORDS : 
+              strong.card-text.fs-6 #{total.totalTonnage} kgs
+          else
+            p There are no farm records captured 
       .row 
         .col.table-responsive
           table.table.table-bordered.table-hover.table-secondary(style='margin-top:15px;')
             thead
+              tr 
+                h5.card-title Farm Report Records
               tr
                 th Name of produce(kgs)
                 th Branch
