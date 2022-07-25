@@ -62,7 +62,7 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form( action="/purchases" method="POST" name='registration' onblur='firstFocus()' )
+      form( action="/purchases" method="POST" name='registration' onblur='firstFocus()' onsubmit='return Validation()')
         .brand-title PROCUREMENT INPUT
         .inputs
           .row

@@ -61,7 +61,7 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form(method="POST" action="/credit/edit?id="+credit._id name='registration' onblur='firstFocus()')
+      form(method="POST" action="/credit/edit?id="+credit._id name='registration' onblur='firstFocus()' onsubmit='return Validation()')
         .brand-title Credit Sales Input
         .inputs
           .row

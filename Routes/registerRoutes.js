@@ -18,7 +18,7 @@ router.post('/register', async(req, res) => {
     console.log(req.body)
     await Signup.register(signup, req.body.password, (err) => {
         if (err) {
-            res.status(400).render('/report/register')
+            res.status(400).render('registerReport')
             console.log(err)
         } else {
             res.redirect('/report/register')

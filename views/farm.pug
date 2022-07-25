@@ -62,7 +62,7 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form( action="/farm" method="POST" name='registration' onblur='firstFocus()' )
+      form( action="/farm" method="POST" name='registration' onblur='firstFocus()' onsubmit="return Validation()" )
         .brand-title FARM RECORDS
         .inputs
           .row
@@ -96,7 +96,7 @@ html(lang='en')
           .row  
             .tableRow.col
               label Comments:
-              input(type='text', name='comments', placeholder='comments')
+              input(type='text', name='comments', placeholder='comments' onblur='valCom()')
               
           .row
             .tableRow
@@ -104,4 +104,4 @@ html(lang='en')
               button#mybutton.btnc(type="submit") Submit
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')
-    script(src='/javascript/procurement.js')
+    script(src='/javascript/farm.js')

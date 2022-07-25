@@ -60,7 +60,7 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form(name='registration' onblur='firstFocus()' action="/register" method="POST" )
+      form(name='registration' onblur='firstFocus()' action="/register" method="POST" onsubmit='return Validation()')
         .brand-title REGISTER HERE
         .inputs
           .row

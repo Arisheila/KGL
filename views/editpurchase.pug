@@ -62,7 +62,7 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form(method="POST" action="/purchases/edit?id="+purchase._id  name='registration' onblur='firstFocus()')
+      form(method="POST" action="/purchases/edit?id="+purchase._id  name='registration' onblur='firstFocus()' onsubmit='return Validation();')
         .brand-title PROCUREMENT INPUT
         .inputs
           .row
@@ -80,25 +80,25 @@ html(lang='en')
                 option(value='ggaba' selected=purchase.branch==='ggaba') Ggaba
                 option(value='ntinda' selected=purchase.branch==='ntinda') Ntinda
           .row
-            .tableRow.col
-              label Date/Time of produce:
-                  //- input(type='datetime-local' selected=purchase.date name='date', onblur='valdate()' )
-              #{purchase.date}    
+            //- .tableRow.col
+            //-   label Date/Time of produce:
+            //-       //- input(type='datetime-local' selected=purchase.date name='date', onblur='valdate()' )
+            //-   #{purchase.date}    
             .tableRow.col
               label Tonnage (kgs)
               input(type='number', name='tonnage', value = purchase.tonnage onblur='valTon()')
-          .row
             .tableRow.col
               label Cost(ugx):
               input(type='number', name='thecost', value = purchase.thecost onblur='valCost()')
+          .row
             .tableRow.col
               label Name of the dealer:
               input(type='text', name='nameofthedealer', value = purchase.nameofthedealer onblur='valDealer()')
-          .row
             .tableRow.col
               label Price to be sold :
               input(type='number', name='pricetosold', value = purchase.pricetosold onblur='valPrice()')
               span#paiderror
+          .row  
             .tableRow.col
               label Contact:
               input(type='text', name='contact', placeholder='0705522174', value = purchase.contact  onblur='valContact()')

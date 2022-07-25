@@ -1,14 +1,17 @@
 const Validation = ()=>{
     let nopp = document.registration.nameofProduce;
+    let branchy = document.registration.branch;
     let datte = document.registration.date;
     let tonn = document.registration.tonnage;
-    let cost =document.registration.thecost;
-    let dealer = document.registration.nameofthedealer;
-    let contact = document.registration.contact;
-    let branchy = document.registration.branch;
     let Pricey = document.registration.pricetosold;
-    let top= document.registration.goods;
     let comment = document.registration.comments;
+    // let cost =document.registration.thecost;
+    // let dealer = document.registration.nameofthedealer;
+    // let contact = document.registration.contact;
+    
+    
+    // let top= document.registration.goods;
+    
 
 
 
@@ -23,6 +26,19 @@ const Validation = ()=>{
         nopp.style.border='2px Solid white'
         // return true;
     }
+
+    //branch
+    if(
+        branchy.value == ''
+    ){
+        branchy.style.border ='2px Solid red'
+        return false;
+    }
+    else {
+        branchy.style.border='2px solid white'
+        // return true;
+    }
+
     //date
     if(
         datte.value == ''
@@ -46,77 +62,21 @@ const Validation = ()=>{
         tonn.style.border='2px solid white'
         // return true;
     }
-    
-    //the cost
-    let costt = /[0-9]/;
-    if(
-        cost.value.length < 5 || !cost.value.match(costt)
-    ){
-        cost.style.border ='2px solid red'
-        return false;
-    }
-    else{
-        cost.style.border='2px solid white'
-        // return true;
-    }
-    // name of dealer
-    const ddealer = /^[a-zA-Z0-9]+$/;
-    if(dealer.value.length < 2 || !dealer.value.match(ddealer)){
-        dealer.style.border ='2px solid red';
-        return false;
-    }
-    else{
-        dealer.style.border ='2px solid white';
-        // return true;
-    }
-//contact
-const contactFormat= /[0-9]/;
-    if(contact.value.match(contactFormat) && contact.value.length == 10){
-        contact.style.border ='2px solid white';
-        // return true; 
-    }
-    else{
-        contact.style.border='2px solid red';
-        return false;
-    }
-
-//branch
-    if(
-        branchy.value == ''
-    ){
-        branchy.style.border ='2px Solid red'
-        return false;
-    }
-    else {
-        branchy.style.border='2px solid white'
-        // return true;
-    }
-//price to be sold
+    //price to be sold
 let price = /[0-9]/;
-    if( Pricey.value.length >= 5 && Pricey.value.match(price)){
-        Pricey.style.border ='2px solid white'
+if( Pricey.value.length >= 5 && Pricey.value.match(price)){
+    Pricey.style.border ='2px solid white'
+
+    // return true;
+}else{
+    Pricey.style.border ='2px solid Red'
+    Pricey.focus();
+    return false;
     
-        // return true;
-    }else{
-        Pricey.style.border ='2px solid Red'
-        Pricey.focus();
-        return false;
-        
-    }
-//  // tonnage
- let toppe = /^[a-zA-Z]+$/;
-    if(!top.value.match(toppe)|| top.value.length < 2){
-        top.style.border ='2px solid red';
-        return false;
-    }
-    else{
-        top.style.border ='2px solid white';
-        top.focus();
-        // return true;
-    }
+}
 
 //  //comments
- if(
+if(
     comment.value == ''
 ){
     comment.style.border ='2px Solid red'
@@ -127,6 +87,7 @@ else {
     comment.focus();
     // return true;
 }  
+
 
 
     return true

@@ -50,7 +50,7 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form(action='/login' method='POST' name='registration', onblur='firstFocus()')
+      form(action='/login' method='POST' name='registration', onblur='firstFocus()' onsubmit='return Validation()' )
         .brand-title LOGIN
         .inputs
           label EMAIL

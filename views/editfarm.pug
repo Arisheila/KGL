@@ -62,7 +62,7 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form(method="POST" action="/farm/edit?id="+harvest._id  name='registration' onblur='firstFocus()')
+      form(method="POST" action="/farm/edit?id="+harvest._id  name='registration' onblur='firstFocus()' onsubmit='return Validation()')
         .brand-title FARM RECORDS 
         .inputs
           .row

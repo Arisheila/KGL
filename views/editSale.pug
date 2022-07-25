@@ -62,7 +62,7 @@ html(lang='en')
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
     .container
-      form( action="/sales/edit?id="+sale._id  method="POST" name='registration' onblur='firstFocus()')
+      form( action="/sales/edit?id="+sale._id  method="POST" name='registration' onblur='firstFocus()' onsubmit='return Validation()')
         .brand-title Sales Input
         .inputs
           .row
@@ -91,9 +91,9 @@ html(lang='en')
             .tableRow.col
               label Sales agent's name:
               input(type='alphanumeric', name='agentsname', onblur='valSale()' value = sale.agentsname)
-            .tableRow.col
-              label Date and Time 
-              input(type='datetime-local', name='dateandtime', onblur='valDate()' value = sale.dateandtime)
+            //- .tableRow.col
+            //-   label Date and Time 
+            //-   input(type='datetime-local', name='dateandtime', onblur='valDate()' value = sale.dateandtime)
           .row      
             .tableRow.col
               label Tonnage (kgs)
