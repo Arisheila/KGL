@@ -21,6 +21,8 @@ const registerRoutes = require("./routes/registerRoutes")
 
 // Database
 const config = require('./config/database');
+
+//initialising models for the login (to be used in passport)
 const Signup = require('./models/Signup');
 
 //Initialising server, the variable server can be named anything and be used like that throughout the calling in the routes file 
