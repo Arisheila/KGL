@@ -49,6 +49,8 @@ html(lang='en')
                 //-       a.dropdown-item(href='/register') Register Here
             li.nav-item
               a.nav-link(href='/landing') LOGOUT
+            //- li.nav-item
+            //-   a.nav-link(href='/register') REGISTER 
     .container
       form(action='/login' method='POST' name='registration', onblur='firstFocus()' onsubmit='return Validation()' )
         .brand-title LOGIN
@@ -57,7 +59,9 @@ html(lang='en')
           input(type='email', name='email' placeholder='example@test.com')
           label PASSWORD
           input(type='password', name='password', placeholder='Min 4 charaters', onblur='valPasso() ')
-          button(type='submit') LOGIN
+          button(type='submit') LOGIN 
+             p
+                a(href="/register") Register 
     span#footer-content &copy; 2022 Copyright: Arinaitwe Sheila
     script(src='/assets/bootstrap/js/bootstrap.bundle.js')
     script(src='/javascript/register.js')
